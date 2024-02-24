@@ -86,3 +86,7 @@ body {
   #profileImage:hover {
     animation: rotate 2s linear infinite;
   }
+  #playButton {
+    position: absolute;
+    top: 0;
+    right: 0;
