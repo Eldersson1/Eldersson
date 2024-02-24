@@ -86,3 +86,7 @@ body {
   #profileImage:hover {
     animation: rotate 2s linear infinite;
   }
+
+  #Musiikki {
+    position: absolute;
+  }
