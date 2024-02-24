@@ -12,3 +12,5 @@ profileImage.addEventListener('mouseout', function() {
     // Palauta CSS-tyyli alkuperäiseksi
     profileImage.style.transform = 'rotate(0deg)';
 });
+const audio = document.querySelector('audio');
+audio.play();
