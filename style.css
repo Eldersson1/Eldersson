@@ -51,10 +51,10 @@ body {
     transform: scale(1.2);
 }
 
-.button {
+.modernly {
     display: block;
     border-radius: 25px; /* Pyöristetty enemmän */
-    background: url('planetmc.png') no-repeat center center; /* Kuvanappi, keskitetty */
+    background: url('modernly.png') no-repeat center center; /* Kuvanappi, keskitetty */
     background-size: cover; /* Kuvan koko */
     border: 4px solid black; /* Mustat ääriviivat, 4px */
     color: white;
@@ -64,6 +64,20 @@ body {
     cursor: pointer;
     margin: 20px auto; /* Siirtää nappia alemmas */
     width: calc(100% - 200px); /* Tekee napista melkein nettisivun levyisen */
+}
+.planetmc {
+  display: block;
+  border-radius: 25px; /* Pyöristetty enemmän */
+  background: url('planetmc.png') no-repeat center center; /* Kuvanappi, keskitetty */
+  background-size: cover; /* Kuvan koko */
+  border: 4px solid black; /* Mustat ääriviivat, 4px */
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 50px 60px; /* Eka padding arvo 50px */
+  cursor: pointer;
+  margin: 20px auto; /* Siirtää nappia alemmas */
+  width: calc(100% - 200px); /* Tekee napista melkein nettisivun levyisen */
 }
 
 .copyright {
