@@ -75,7 +75,7 @@ body {
   text-align: center;
   font-size: 16px;
   padding: 50px 60px; /* Eka padding arvo 50px */
-  cursor: pointer;
+  cursor:move;
   margin: 20px auto; /* Siirtää nappia alemmas */
   width: calc(100% - 200px); /* Tekee napista melkein nettisivun levyisen */
 }
