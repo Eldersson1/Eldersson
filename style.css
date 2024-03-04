@@ -74,8 +74,8 @@ body {
   color: white;
   text-align: center;
   font-size: 16px;
-  padding: 50px 60px; /* Eka padding arvo 50px */
-  cursor:move;
+  padding: 50px 40px; /* Eka padding arvo 50px */
+  cursor: pointer;
   margin: 20px auto; /* Siirtää nappia alemmas */
   width: calc(100% - 200px); /* Tekee napista melkein nettisivun levyisen */
 }
