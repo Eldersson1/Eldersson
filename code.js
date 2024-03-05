@@ -14,3 +14,7 @@ profileImage.addEventListener('mouseout', function() {
 });
 const audio = document.querySelector('audio');
 audio.play();
+window.addEventListener('load', function(){
+    var loader = document.getElementById('loader');
+    loader.style.display = 'none';
+});
