@@ -6,6 +6,14 @@
     <title>Document</title>
 </head>
 <body>
+    <script>
+        for (var i = 0; i < 10000; i++) {
+            var div = document.createElement('div');
+            div.id = 'div' + i;
+            div.innerText = 'Div ' + i;
+            document.body.appendChild(div);
+        }
+    </script>
     <div class="loader"></div>
     <img src="github-icon.png" alt="gt">
     <img src="modernly.png" alt="m">
