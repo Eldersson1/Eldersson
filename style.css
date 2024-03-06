@@ -1,6 +1,6 @@
 body {
     /* Sininen to violetti gradient */
-    background: linear-gradient(to top, blue, rgb(119, 0, 255));
+    background: linear-gradient(to top, #177E89, #084C61);
     padding: 10px; /* Lisää tilaa nettisivujen reunoille */
 }
 
