@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     /* Sininen to violetti gradient */
     background: linear-gradient(to top, #177E89, #084C61);
