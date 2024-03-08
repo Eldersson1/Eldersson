@@ -63,10 +63,9 @@ body {
 }
 .comment {
     font-family: minecraft;
-    font-size: 60px;
-    left: 20px;
-    top: 20px;
-    transform: skewX(15deg);
+    font-size: 30px;
+    left: 10px;
+    top: 1px;
 }
 
 .modernly {
