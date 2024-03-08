@@ -81,6 +81,10 @@ body {
   cursor: pointer;
   margin: 20px auto; /* Siirtää nappia alemmas */
   width: calc(100% - 200px); /* Tekee napista melkein nettisivun levyisen */
+  -webkit-animation: slide 1s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
 }
 @-webkit-keyframes pmc {
     100% { vertical-align: center; }
