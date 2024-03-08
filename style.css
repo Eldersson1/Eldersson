@@ -104,11 +104,11 @@ body {
     animation-delay: 2s;
   }
   
-  @-webkit-keyframes slide {
+  @-webkit-keyframes pmc {
     100% { left: 0; }
   }
   
-  @keyframes slide {
+  @keyframes pmc {
     100% { left: 0; }
   }
   
