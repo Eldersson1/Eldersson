@@ -66,7 +66,7 @@ body {
     font-size: 30px;
     left: 10px;
     top: 1px;
-    transform: skewX(15deg)
+    text-orientation: sideways-right;
 }
 
 .modernly {
