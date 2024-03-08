@@ -61,6 +61,13 @@ body {
 .icon:hover {
     transform: scale(1.2);
 }
+.comment {
+    font-family: minecraft;
+    font-size: 60px;
+    left: 20px;
+    top: 20px;
+    transform: skewX(15deg);
+}
 
 .modernly {
     display: block;
