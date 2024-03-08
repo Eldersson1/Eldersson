@@ -1,28 +1,12 @@
+@font-face {
+    font-family: font;
+    src: url(font.ttf)
+}
 body {
     /* Sininen to violetti gradient */
     background: linear-gradient(to top, #177E89, #084C61);
     padding: 10px; /* Lisää tilaa nettisivujen reunoille */
 }
-#pmc {
-    position: absolute;
-    left: -100px;
-    width: 100px;
-    height: 100px;
-    background: blue;
-    -webkit-animation: slide 0.5s forwards;
-    -webkit-animation-delay: 2s;
-    animation: slide 0.5s forwards;
-    animation-delay: 2s;
-  }
-  
-  @-webkit-keyframes pmc {
-    100% { left: 0; }
-  }
-  
-  @keyframes pmc {
-    100% { left: 0; }
-  }
-  
 .center {
     display: block;
     margin-left: auto;
@@ -38,7 +22,7 @@ body {
     font-size: 50px;
     color: black;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: font;
     font-weight: bold;
 }
 
