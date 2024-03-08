@@ -67,6 +67,7 @@ body {
     left: 10px;
     top: 1px;
     writing-mode: sideways-lr;
+    text-orientation: sideways;
 }
 
 .modernly {
