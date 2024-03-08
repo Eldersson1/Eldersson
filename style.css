@@ -6,6 +6,10 @@
     font-family: desc-font;
     src: url(desc-font.ttf)
 }
+@font-face {
+    font-family: minecraft;
+    src: url(minecraft.ttf)
+}
 body {
     /* Sininen to violetti gradient */
     background: linear-gradient(to top, #177E89, #084C61);
