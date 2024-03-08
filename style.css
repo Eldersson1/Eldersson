@@ -68,7 +68,7 @@ body {
     margin: 20px auto; /* Siirtää nappia alemmas */
     width: calc(100% - 200px); /* Tekee napista melkein nettisivun levyisen */
 }
-.planetmc {
+#pmc {
   display: block;
   border-radius: 25px; /* Pyöristetty enemmän */
   background: url('planetmc.png') no-repeat center center; /* Kuvanappi, keskitetty */
@@ -82,6 +82,13 @@ body {
   margin: 20px auto; /* Siirtää nappia alemmas */
   width: calc(100% - 200px); /* Tekee napista melkein nettisivun levyisen */
 }
+@-webkit-keyframes pmc {
+    100% { vertical-align: center; }
+  }
+  
+  @keyframes pmc {
+    100% { vertical-align: center;; }
+  }
 
 .copyright {
     font-size: 14px;
