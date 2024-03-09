@@ -68,7 +68,7 @@ body {
     top: 30px;
     writing-mode: sideways-lr;
     text-orientation: mixed;
-    position: static;
+    position: absolute;
 }
 
 .modernly {
