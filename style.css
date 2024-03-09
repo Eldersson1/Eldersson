@@ -69,7 +69,7 @@ body {
     writing-mode: sideways-lr;
     text-orientation: mixed;
     position: absolute;
-    transform: rotate(-15deg);
+    transform: rotate(-10deg);
 }
 .comment1 {
     font-family: minecraft;
@@ -79,7 +79,7 @@ body {
     writing-mode: sideways-lr;
     text-orientation: mixed;
     position: absolute;
-    transform: rotate(15deg);
+    transform: rotate(10deg);
 }
 .comment2 {
     font-family: minecraft;
@@ -89,7 +89,7 @@ body {
     writing-mode: sideways-lr;
     text-orientation: mixed;
     position: absolute;
-    transform: rotate(-15deg);
+    transform: rotate(-10deg);
 }
 .comment3 {
     font-family: minecraft;
@@ -99,17 +99,17 @@ body {
     writing-mode: sideways-lr;
     text-orientation: mixed;
     position: absolute;
-    transform: rotate(15deg);
+    transform: rotate(10deg);
 }
 .comment4 {
     font-family: minecraft;
     font-size: 37px;
     left: 5px;
-    top: 150px;
+    top: 300px;
     writing-mode: sideways-lr;
     text-orientation: mixed;
     position: absolute;
-    transform: rotate(-15deg);
+    transform: rotate(-10deg);
 }
 .modernly {
     display: block;
