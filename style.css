@@ -65,11 +65,11 @@ body {
     font-family: minecraft;
     font-size: 30px;
     left: 10px;
-    top: 30px;
+    top: 150px;
     writing-mode: sideways-lr;
     text-orientation: mixed;
     position: absolute;
-    transform: rotate(35deg);
+    transform: rotate(-20deg);
 }
 
 .modernly {
