@@ -75,17 +75,17 @@ body {
     font-family: minecraft;
     font-size: 37px;
     left: 5px;
-    top: 150px;
+    top: 50px;
     writing-mode: sideways-lr;
     text-orientation: mixed;
     position: absolute;
-    transform: rotate(-15deg);
+    transform: rotate(15deg);
 }
 .comment2 {
     font-family: minecraft;
     font-size: 37px;
     left: 5px;
-    top: 150px;
+    top: 200px;
     writing-mode: sideways-lr;
     text-orientation: mixed;
     position: absolute;
@@ -95,11 +95,11 @@ body {
     font-family: minecraft;
     font-size: 37px;
     left: 5px;
-    top: 150px;
+    top: 250px;
     writing-mode: sideways-lr;
     text-orientation: mixed;
     position: absolute;
-    transform: rotate(-15deg);
+    transform: rotate(15deg);
 }
 .comment4 {
     font-family: minecraft;
