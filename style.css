@@ -64,12 +64,12 @@ body {
 .comment {
     font-family: minecraft;
     font-size: 40px;
-    left: 10px;
+    left: 5px;
     top: 150px;
     writing-mode: sideways-lr;
     text-orientation: mixed;
     position: absolute;
-    transform: rotate(-20deg);
+    transform: rotate(-15deg);
 }
 
 .modernly {
