@@ -11,3 +11,7 @@ profileImage.addEventListener('mouseout', function() {
     // Palauta CSS-tyyli alkuperäiseksi
     profileImage.style.transform = 'rotate(0deg)';
 });
+let carousel = document.querySelector('.carousel');
+setInterval(() => {
+  carousel.scrollBy({ left: 100, behavior: 'smooth' });
+}, 2000);

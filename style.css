@@ -168,3 +168,14 @@ body {
   #Musiikki {
     position: absolute;
   }
+  .carousel {
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+  }
+  
+  .carousel img {
+    height: 200px;
+    margin: 10px;
+  }
