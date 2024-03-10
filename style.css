@@ -188,6 +188,7 @@ body {
   position: relative;
   top: 0;
   animation: slide 12s steps(4) infinite;
+  display: absolute;
 }
 @keyframes slide {
   100%{
