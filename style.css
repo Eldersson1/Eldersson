@@ -168,21 +168,31 @@ body {
   #Musiikki {
     position: absolute;
   }
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 3)); }
+  }
+  
   .carousel {
-    display:flex;
-    overflow: auto;
-    white-space: nowrap;
-    scroll-behavior: smooth;
+    display: flex;
+    overflow: hidden;
+    width: 750px;
   }
   
   .carousel div {
+    animation: scroll 20s linear infinite;
+    display: flex;
+    width: calc(250px * 6);
+  }
+  
+  .carousel div div {
     height: 200px;
-    width: 200px;
+    width: 250px;
     margin: 10px;
+    border: 1px solid white;
     color: white;
     background-color: black;
     text-align: center;
-    border-radius: 200;
   }
   
   .carousel img {
