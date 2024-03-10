@@ -74,7 +74,7 @@ body {
 .comment1 {
     font-family: minecraft;
     font-size: 37px;
-    left: 5px;
+    left: 30px;
     top: 400px;
     writing-mode: sideways-lr;
     text-orientation: mixed;
@@ -84,8 +84,8 @@ body {
 .comment2 {
     font-family: minecraft;
     font-size: 37px;
-    left: 10px;
-    top: 90px;
+    left: 30px;
+    top: 110px;
     writing-mode: sideways-lr;
     text-orientation: mixed;
     position: absolute;
