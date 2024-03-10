@@ -169,7 +169,7 @@ body {
     position: absolute;
   }
   .carousel {
-    display: flex;
+    display:block;
     overflow: auto;
     white-space: nowrap;
     scroll-behavior: smooth;
