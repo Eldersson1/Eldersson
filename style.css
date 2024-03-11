@@ -55,6 +55,7 @@ body {
     background: black;
     margin-top: 10px;
     margin-bottom: 10px; /* Lisää tilaa linkkinappien ja viivan välille */
+    border-radius: 200;
 }
 
 .icon {
