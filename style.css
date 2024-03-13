@@ -177,7 +177,7 @@ body {
   .carousel {
     display: flex;
     overflow: hidden;
-    width: 750px;
+    width: 100%;
   }
   
   .carousel div {
