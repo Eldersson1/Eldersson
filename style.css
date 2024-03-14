@@ -174,7 +174,13 @@ body {
     100% { transform: translateX(calc(-250px * 3)); }
   }
   
-  .laatikko {
+  .carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.laatikko {
     width: 100%;
     background-color: black;
     color: white;
