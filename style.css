@@ -187,10 +187,11 @@ body {
     padding: 20px;
     box-sizing: border-box;
     border-radius: 200px;
+    height: 500px;
 }
 
 .laatikko img {
-    width: 100%;
+    width: 20%;
     height: auto;
 }
 
