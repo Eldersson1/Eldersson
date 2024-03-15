@@ -181,6 +181,7 @@ body {
 }
 
 .laatikko {
+    display: grid;
     width: 20%;
     background-color: black;
     color: white;
@@ -188,6 +189,8 @@ body {
     box-sizing: border-box;
     border-radius: 50px;
     height: 500px;
+    row-gap: 50px;
+    column-gap: 100px;
 }
 
 .laatikko img {
