@@ -16,7 +16,8 @@
 }
 body {
     /* Sininen to violetti gradient */
-    background: linear-gradient(to top, #177E89, #084C61);
+    /* background: linear-gradient(to top, #177E89, #084C61);-->*/
+    background: linear-gradient(60deg, #420285, #08BDBD);
     padding: 10px; /* Lisää tilaa nettisivujen reunoille */
     opacity: 0;
             transition: opacity 2s;
