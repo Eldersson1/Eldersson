@@ -1,3 +1,19 @@
+@font-face {
+    font-family: font;
+    src: url(font.ttf);
+}
+@font-face {
+    font-family: desc-font;
+    src: url(desc-font.ttf);
+}
+@font-face {
+    font-family: minecraft;
+    src: url(minecraft.ttf);
+}
+@font-face {
+    font-family: roboto;
+    src: url(roboto.ttf);
+}
 body {
     background: linear-gradient(60deg, #420285, #08BDBD);
     padding: 10px;
@@ -17,12 +33,14 @@ body {
     font-size: 50px;
     color: black;
     text-align: center;
+    font-family: font;
     font-weight: bold;
 }
 .small-text {
     font-size: 20px;
     color: black;
     text-align: center;
+    font-family: desc-font;
     font-weight: bold;
     margin-top: -40px;
 }
@@ -46,11 +64,32 @@ body {
 .project-card {
     background-color: #fff;
     border-radius: 15px;
-    padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 20px auto;
     max-width: 600px;
     text-align: center;
+    overflow: hidden;
+}
+.project-image {
+    background: url('your-image.jpg') no-repeat center center;
+    background-size: cover;
+    height: 200px;
+}
+.project-info {
+    padding: 20px;
+}
+.project-info h2, .project-info p {
+    margin: 0;
+}
+.project-info h2 {
+    font-family: font;
+    font-size: 24px;
+    color: black;
+}
+.project-info p {
+    font-family: desc-font;
+    font-size: 16px;
+    color: black;
 }
 .skills {
     text-align: center;
