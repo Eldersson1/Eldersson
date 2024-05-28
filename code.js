@@ -1,13 +1,8 @@
-// Ota profiilikuva elementti
-var profileImage = document.getElementById('profileImage');
-
-// Lisää hiiren yli -tapahtumakuuntelija
-profileImage.addEventListener('mouseover', function() {
-    // Muuta CSS-tyyliä animoidaksesi kuvan
-    profileImage.style.transform = 'rotate(360deg)';
+const movingCards = document.querySelector('.moving-cards');
+movingCards.addEventListener('mouseover', () => {
+    movingCards.style.transition = 'transform 1s';
 });
-// Lisää hiiren pois -tapahtumakuuntelija
-profileImage.addEventListener('mouseout', function() {
-    // Palauta CSS-tyyli alkuperäiseksi
-    profileImage.style.transform = 'rotate(0deg)';
+
+movingCards.addEventListener('mouseout', () => {
+    movingCards.style.transition = 'transform 0.3s';
 });
