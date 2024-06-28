@@ -71,7 +71,7 @@ body {
     overflow: hidden;
 }
 .project-image {
-    background: url('your-image.jpg') no-repeat center center;
+    background: url('first-image.png') no-repeat center center;
     background-size: cover;
     height: 200px;
 }
