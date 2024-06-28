@@ -94,6 +94,8 @@ body {
 .skills {
     text-align: center;
     margin: 20px auto;
+    font-family: font;
+    font-size: 50px;
 }
 .progress-bar {
     width: 80%;
