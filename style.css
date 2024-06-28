@@ -14,6 +14,10 @@
     font-family: roboto;
     src: url(roboto.ttf);
 }
+@font-face {
+    font-family: futura;
+    src: url(Futura\ Bold.otf);
+}
 body {
     background: linear-gradient(60deg, #420285, #08BDBD);
     padding: 10px;
@@ -131,6 +135,13 @@ body {
 }
 .copyright {
     font-size: 14px;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+}
+.skills-text {
+    font-family: futura;
+    font-size: 60px;
     color: black;
     text-align: center;
     margin-top: 20px;
