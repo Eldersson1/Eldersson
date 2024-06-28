@@ -73,7 +73,7 @@ body {
 .project-image {
     background: url('first-image.png') no-repeat center center;
     background-size: cover;
-    height: 200px;
+    height: 250px;
 }
 .project-info {
     padding: 20px;
