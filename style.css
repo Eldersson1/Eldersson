@@ -264,6 +264,8 @@ body {
     height: 200px; /* Adjust height as needed */
     background: url('first-image.png') no-repeat center center;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
 }
 
