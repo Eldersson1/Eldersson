@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const wrapper = document.querySelector('.scrolling-wrapper');
     const cards = document.querySelectorAll('.scrolling-wrapper .card');
     const cardWidth = cards[0].offsetWidth;
-    const teleportDistance = 500; // Adjust teleport distance for earlier teleportation
     let currentPosition = 0;
     const scrollAmount = 2; // Adjust scroll speed if necessary
 
@@ -18,9 +17,16 @@ document.addEventListener("DOMContentLoaded", function() {
         currentPosition += scrollAmount;
         wrapper.style.transform = `translateX(-${currentPosition}px)`;
 
-        // Check if scrolled past the width of one card plus teleport distance
-        if (currentPosition >= cardWidth + teleportDistance) {
-            currentPosition -= cardWidth + teleportDistance; // Adjust teleport distance
+        // Get the bounding rectangle of the wrapper element
+        const wrapperRect = wrapper.getBoundingClientRect();
+
+        // Get the bounding rectangle of the last card
+        const lastCardRect = cards[cards.length - 1].getBoundingClientRect();
+
+        // Check if the last card is completely outside the viewport
+        if (lastCardRect.right < wrapperRect.left) {
+            currentPosition += cardWidth; // Teleport distance
+            wrapper.style.transform = `translateX(-${currentPosition}px)`;
             wrapper.appendChild(wrapper.firstElementChild); // Move the first card to the end
         }
 
