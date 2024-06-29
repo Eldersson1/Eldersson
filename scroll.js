@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Check if scrolled past the width of one card
         if (currentPosition >= cardWidth + teleportDistance) {
-            currentPosition -= cardWidth;
+            currentPosition -= cardWidth + teleportDistance; // Adjust teleport distance
             wrapper.appendChild(wrapper.firstElementChild); // Move the first card to the end
         }
 
