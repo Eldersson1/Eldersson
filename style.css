@@ -262,7 +262,7 @@ body {
 
 .card .project-image {
     width: 100%; /* Ensure the image fills the width of the card */
-    height: 250px; /* Set a fixed height for the card */
+    height: 275px; /* Set a fixed height for the card */
     background-image: url('first-image.png');
     background-repeat: no-repeat;
     background-size: cover; /* Cover ensures the image fills the entire card */
