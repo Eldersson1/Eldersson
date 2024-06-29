@@ -263,7 +263,7 @@ body {
 .card .project-image {
     background-image: url('first-image.png');
     background-repeat: no-repeat;
-    background-size: cover; /* Cover ensures the image fills the entire card */
+    background-size:auto; /* Cover ensures the image fills the entire card */
     background-position: center; /* Center the image within the card */
     border-top-left-radius: 15px; /* Rounded corners for the card */
     border-top-right-radius: 15px; /* Rounded corners for the card */
