@@ -128,71 +128,33 @@ body {
     height: 320px; /* Set height to accommodate smaller cards */
 }
 .card {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, filter 0.3s;
-    flex: 0 0 200px; /* Set width for smaller vertical cards */
-    margin: 0 10px;
-}
-.card:hover {
-    transform: scale(1.1);
-    filter: brightness(1.2);
-}
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-.moving-cards {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-}
-.moving-cards::before, .moving-cards::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100px;
-    z-index: 1;
-}
-.moving-cards::before {
-    left: 0;
-    background: linear-gradient(to right, #420285, transparent);
-}
-.moving-cards::after {
-    right: 0;
-    background: linear-gradient(to left, #08BDBD, transparent);
-}
-.moving-cards .cards-container {
-    display: flex;
-    animation: scroll 15s linear infinite;
-}
-.moving-cards .card {
-    flex: 0 0 200px; /* Adjust the width for smaller cards */
-    margin: 0 10px;
     background: linear-gradient(60deg, #0a7be6, #003dc2);
     border-radius: 15px;
-    overflow: hidden;
+    padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 0 0 200px; /* Set width for smaller vertical cards */
+    margin: 0 10px;
+    overflow: hidden;
     text-align: center;
 }
-.moving-cards .card .project-image {
+.card .project-image {
     height: 150px; /* Adjust the height for smaller cards */
+    background: url('first-image.png') no-repeat center center;
+    background-size: cover;
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
 }
-.moving-cards .card .project-info {
+.card .project-info {
     padding: 10px;
 }
-.moving-cards .card .project-info h2 {
+.card .project-info h2 {
+    font-family: 'font';
     font-size: 18px; /* Adjust the font size for smaller cards */
+    color: black;
 }
-.moving-cards .card .project-info p {
+.card .project-info p {
+    font-family: 'desc-font';
     font-size: 14px; /* Adjust the font size for smaller cards */
+    color: black;
 }
 .skills-text {
     font-family: 'futura';
