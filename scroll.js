@@ -13,27 +13,27 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function scrollCards() {
-        currentPosition--;
+        currentPosition++;
 
-        // Update the transform property to scroll left
-        wrapper.style.transform = `translateX(-${currentPosition}px)`;
+        // Update the transform property to scroll right
+        wrapper.style.transform = `translateX(${currentPosition}px)`;
 
-        // Check if any card is completely out of view on the right
+        // Check if any card is completely out of view on the left
         cards.forEach(card => {
             const cardRect = card.getBoundingClientRect();
-            if (cardRect.left > wrapper.offsetWidth) {
-                // Calculate the teleport position to the left
-                const teleportPosition = currentPosition - cardWidth;
+            if (cardRect.right < 0) {
+                // Calculate the teleport position to the right
+                const teleportPosition = currentPosition + wrapper.offsetWidth;
                 
-                // Teleport the card to the left
-                currentPosition -= cardWidth; // Adjust teleport distance
-                wrapper.style.transform = `translateX(-${teleportPosition}px)`;
-                wrapper.insertBefore(card, wrapper.firstElementChild); // Move the card to the beginning of wrapper
+                // Teleport the card to the right
+                currentPosition += cardWidth; // Adjust teleport distance
+                wrapper.style.transform = `translateX(${teleportPosition}px)`;
+                wrapper.appendChild(card); // Move the card to the end of wrapper
             }
         });
 
-        // Check if currentPosition is less than or equal to negative total width of cards
-        if (currentPosition <= -wrapper.scrollWidth) {
+        // Check if currentPosition is greater than or equal to total width of cards
+        if (currentPosition >= wrapper.scrollWidth) {
             currentPosition = 0;
         }
 
