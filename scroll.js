@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const cardRect = card.getBoundingClientRect();
 
             // Check if the right edge of the card is outside the viewport
-            if (cardRect.right < wrapperRect.left) {
+            if (cardRect.right < wrapperRect.left + cardWidth) {
                 // Calculate the teleport position to the right
                 const teleportPosition = currentPosition + viewportWidth;
 
