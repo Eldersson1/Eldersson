@@ -18,9 +18,10 @@ document.addEventListener("DOMContentLoaded", function() {
         currentPosition += scrollAmount;
         wrapper.style.transform = `translateX(-${currentPosition}px)`;
 
-        // Check if reached the end of cloned cards
-        if (currentPosition >= wrapper.scrollWidth / 2) {
+        // Reset position when scrolled past all cards
+        if (currentPosition >= cardWidth) {
             currentPosition = 0;
+            wrapper.style.transform = `translateX(0)`;
         }
 
         requestAnimationFrame(scrollCards);
