@@ -261,11 +261,15 @@ body {
 }
 
 .card .project-image {
-    height: 200px; /* Adjust height as needed */
-    background: url('first-image.png') no-repeat center center;
-    background-size: cover;
+    width: 100%; /* Ensure the image fills the width of the card */
+    height: 250px; /* Set a fixed height for the card */
+    background-image: url('first-image.png');
     background-repeat: no-repeat;
-    background-position: center;
+    background-size: cover; /* Cover ensures the image fills the entire card */
+    background-position: center; /* Center the image within the card */
+    border-top-left-radius: 15px; /* Rounded corners for the card */
+    border-top-right-radius: 15px; /* Rounded corners for the card */
+
     mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
 }
 
