@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let cardWidth = cards[0].offsetWidth;
     let currentPosition = 0;
+    let scrollAmount = 2; // Adjust scroll speed if necessary
 
+    // Clone cards function remains the same
     function cloneCards() {
         cards.forEach(card => {
             const clone = card.cloneNode(true);
@@ -13,13 +15,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function scrollCards() {
-        currentPosition++;
+        currentPosition += scrollAmount;
         wrapper.style.transform = `translateX(-${currentPosition}px)`;
 
-        // Reset position when scrolled past all cards
-        if (currentPosition >= wrapper.scrollWidth - wrapper.offsetWidth) {
+        // Check if reached the end of cloned cards
+        if (currentPosition >= wrapper.scrollWidth / 2) {
             currentPosition = 0;
-            wrapper.style.transform = `translateX(0)`;
         }
 
         requestAnimationFrame(scrollCards);
