@@ -17,14 +17,14 @@ document.addEventListener("DOMContentLoaded", function() {
         currentPosition += scrollAmount;
         wrapper.style.transform = `translateX(-${currentPosition}px)`;
 
-        // Get the bounding rectangle of the wrapper element
-        const wrapperRect = wrapper.getBoundingClientRect();
+        // Get viewport dimensions
+        const viewportWidth = window.innerWidth;
 
         // Get the bounding rectangle of the last card
         const lastCardRect = cards[cards.length - 1].getBoundingClientRect();
 
-        // Check if the last card is completely outside the viewport
-        if (lastCardRect.right < wrapperRect.left) {
+        // Check if the right edge of the last card is outside the viewport
+        if (lastCardRect.right < 0) {
             currentPosition += cardWidth; // Teleport distance
             wrapper.style.transform = `translateX(-${currentPosition}px)`;
             wrapper.appendChild(wrapper.firstElementChild); // Move the first card to the end
