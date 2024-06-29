@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", function() {
         currentPosition += scrollAmount;
         wrapper.style.transform = `translateX(-${currentPosition}px)`;
 
-        // Reset position when scrolled past all cards
+        // Check if scrolled past the width of one card
         if (currentPosition >= cardWidth) {
-            currentPosition = 0;
-            wrapper.style.transform = `translateX(0)`;
+            currentPosition -= cardWidth;
+            wrapper.appendChild(wrapper.firstElementChild); // Move the first card to the end
         }
 
         requestAnimationFrame(scrollCards);
