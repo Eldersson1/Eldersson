@@ -162,3 +162,44 @@ body {
     color: black;
     text-align: center;
 }
+.scrolling-wrapper {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.scrolling-wrapper .card {
+    display: inline-block;
+    background: linear-gradient(60deg, #0a7be6, #003dc2);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.scrolling-wrapper .card .project-image {
+    background: url('first-image.png') no-repeat center center;
+    background-size: cover;
+    height: 150px;
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+.scrolling-wrapper .card .project-info {
+    padding: 10px;
+}
+
+.scrolling-wrapper .card .project-info h2 {
+    font-family: 'font';
+    font-size: 18px;
+    color: black;
+}
+
+.scrolling-wrapper .card .project-info p {
+    font-family: 'desc-font';
+    font-size: 14px;
+    color: black;
+}
