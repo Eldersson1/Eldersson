@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     const wrapper = document.querySelector('.scrolling-wrapper');
     const cards = document.querySelectorAll('.scrolling-wrapper .card');
-
-    let cardWidth = cards[0].offsetWidth;
+    const cardWidth = cards[0].offsetWidth;
     let currentPosition = 0;
-    let scrollAmount = 2; // Adjust scroll speed if necessary
+    const scrollAmount = 2; // Adjust scroll speed if necessary
 
     // Clone cards function remains the same
     function cloneCards() {
