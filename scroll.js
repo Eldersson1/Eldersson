@@ -24,18 +24,13 @@ document.addEventListener("DOMContentLoaded", function() {
             if (cardRect.right < 0) {
                 // Calculate the teleport position to the right
                 const teleportPosition = currentPosition + wrapper.offsetWidth;
-                
+
                 // Teleport the card to the right
                 currentPosition += cardWidth; // Adjust teleport distance
                 wrapper.style.transform = `translateX(${teleportPosition}px)`;
                 wrapper.appendChild(card); // Move the card to the end of wrapper
             }
         });
-
-        // Check if currentPosition is greater than or equal to total width of cards
-        if (currentPosition >= wrapper.scrollWidth) {
-            currentPosition = 0;
-        }
 
         // Request animation frame for smooth scrolling
         requestAnimationFrame(scrollCards);
