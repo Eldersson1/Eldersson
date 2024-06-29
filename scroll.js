@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const wrapper = document.querySelector('.scrolling-wrapper');
     const cards = document.querySelectorAll('.scrolling-wrapper .card');
     const cardWidth = cards[0].offsetWidth;
-    const teleportDistance = 300; // Adjust teleport distance as needed for more visibility
+    const teleportDistance = 500; // Adjust teleport distance for earlier teleportation
     let currentPosition = 0;
     const scrollAmount = 2; // Adjust scroll speed if necessary
 
