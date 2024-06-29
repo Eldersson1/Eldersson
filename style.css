@@ -203,3 +203,45 @@ body {
     font-size: 14px;
     color: black;
 }
+.scrolling-wrapper {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+}
+
+.card {
+    display: inline-block;
+    background: linear-gradient(60deg, #0a7be6, #003dc2);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.card .project-image {
+    height: 150px;
+    background: url('first-image.png') no-repeat center center;
+    background-size: cover;
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+.card .project-info {
+    padding: 10px;
+}
+
+.card .project-info h2 {
+    font-family: 'font';
+    font-size: 18px;
+    color: black;
+}
+
+.card .project-info p {
+    font-family: 'desc-font';
+    font-size: 14px;
+    color: black;
+}
