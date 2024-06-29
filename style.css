@@ -245,3 +245,41 @@ body {
     font-size: 14px;
     color: black;
 }
+.scrolling-wrapper {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+}
+
+.card {
+    display: inline-block;
+    width: 300px; /* Adjust width as needed */
+    margin: 20px;
+    transition: transform 0.5s ease;
+}
+
+.card .project-image {
+    height: 200px; /* Adjust height as needed */
+    background: url('first-image.png') no-repeat center center;
+    background-size: cover;
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+.card .project-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.card .project-info h2 {
+    font-family: 'font';
+    font-size: 24px;
+    color: black;
+}
+
+.card .project-info p {
+    font-family: 'desc-font';
+    font-size: 16px;
+    color: black;
+}
