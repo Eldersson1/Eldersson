@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const wrapper = document.querySelector('.scrolling-wrapper');
     const cards = document.querySelectorAll('.scrolling-wrapper .card');
     const cardWidth = cards[0].offsetWidth;
-    let currentPosition = 0;
     const scrollAmount = 2; // Adjust scroll speed if necessary
 
     // Clone cards function remains the same
@@ -14,21 +13,29 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function scrollCards() {
+        // Calculate the viewport dimensions
+        const viewportWidth = window.innerWidth;
+        const wrapperRect = wrapper.getBoundingClientRect();
+
+        // Loop through each card to check its position
+        cards.forEach(card => {
+            const cardRect = card.getBoundingClientRect();
+
+            // Check if the right edge of the card is outside the viewport
+            if (cardRect.right < wrapperRect.left) {
+                // Calculate the teleport position to the right
+                const teleportPosition = currentPosition + viewportWidth;
+
+                // Teleport the card to the right
+                currentPosition += cardWidth; // Adjust teleport distance
+                wrapper.style.transform = `translateX(-${teleportPosition}px)`;
+                wrapper.appendChild(card); // Move the card to the end of wrapper
+            }
+        });
+
+        // Increment the current position for continuous scrolling
         currentPosition += scrollAmount;
         wrapper.style.transform = `translateX(-${currentPosition}px)`;
-
-        // Get viewport dimensions
-        const viewportWidth = window.innerWidth;
-
-        // Get the bounding rectangle of the last card
-        const lastCardRect = cards[cards.length - 1].getBoundingClientRect();
-
-        // Check if the right edge of the last card is outside the viewport
-        if (lastCardRect.right < 0) {
-            currentPosition += cardWidth; // Teleport distance
-            wrapper.style.transform = `translateX(-${currentPosition}px)`;
-            wrapper.appendChild(wrapper.firstElementChild); // Move the first card to the end
-        }
 
         requestAnimationFrame(scrollCards);
     }
