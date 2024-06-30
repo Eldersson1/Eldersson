@@ -216,6 +216,11 @@ body {
     background: url('first-image.png') no-repeat center center;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    height: 250px;
+    background: url('first-image.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);   
 }
 
 .scrolling-wrapper .card .project-info {
