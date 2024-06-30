@@ -260,7 +260,7 @@ body {
 }
 
 #play-button:hover {
-    background-color: rgb(13, 129, 133);
+    background-color: rgb(221, 18, 18);
     transform: scale(1.1);
 }
 
