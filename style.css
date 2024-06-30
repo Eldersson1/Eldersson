@@ -248,7 +248,7 @@ body {
     cursor: pointer;
     outline: none;
     transition: background-color 0.3s, transform 0.3s;
-    position: sticky;
+    position: absolute;
     top: 800px;
     right: 10px;
 }
