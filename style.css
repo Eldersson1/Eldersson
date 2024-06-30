@@ -99,6 +99,15 @@ body {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
+.project-image {
+    height: 250px;
+    background: url('mo.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
 
 .project-info {
     padding: 20px;
