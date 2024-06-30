@@ -1,3 +1,5 @@
+// scripts.js
+
 document.addEventListener("DOMContentLoaded", function() {
   var audio = document.getElementById('background-music');
   var playButton = document.getElementById('play-button');
