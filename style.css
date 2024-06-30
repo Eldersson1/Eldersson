@@ -220,8 +220,6 @@ body {
     background-size: cover;
     position: relative;
     mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
 }
 
 .scrolling-wrapper .card .project-info {
