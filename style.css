@@ -249,8 +249,8 @@ body {
     outline: none;
     transition: background-color 0.3s, transform 0.3s;
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 40px;
+    right: 40px;
 }
 
 #play-button svg {
