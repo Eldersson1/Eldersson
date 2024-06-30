@@ -248,6 +248,9 @@ body {
     cursor: pointer;
     outline: none;
     transition: background-color 0.3s, transform 0.3s;
+    position: sticky;
+    top: 10px;
+    right: 10px;
 }
 
 #play-button svg {
@@ -257,7 +260,7 @@ body {
 }
 
 #play-button:hover {
-    background-color: #f0f0f0;
+    background-color: rgb(13, 129, 133);
     transform: scale(1.1);
 }
 
