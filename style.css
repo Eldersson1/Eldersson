@@ -214,11 +214,6 @@ body {
 
 .scrolling-wrapper .card .project-image {
     background: url('first-image.png') no-repeat center center;
-    height: 250px;
-    background: url('first-image.png') no-repeat center center;
-    background-size: cover;
-    position: relative;
-    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
