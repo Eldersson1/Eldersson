@@ -250,16 +250,7 @@ body {
 /* styles.css */
 
 #play-button {
-    background-color: transparent;
-    border: 2px solid #000;
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.3s, transform 0.3s;
-    position: absolute;
-    top: 40px;
-    right: 40px;
+    background-color: url('play.png');
 }
 
 #play-button svg {
