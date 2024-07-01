@@ -79,7 +79,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 20px auto;
-    max-width: 800px;
+    max-width: 700px;
     text-align: center;
     overflow: hidden;
     position: relative;
@@ -153,7 +153,7 @@ body {
     border-radius: 15px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    flex: 0 0 200px;
+    flex: 0 0 250px;
     margin: 0 10px;
     overflow: hidden;
     text-align: center;
