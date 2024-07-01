@@ -86,6 +86,7 @@ body {
 }
 
 .project-image {
+    height: 250px;
     background-image: url(images/first-image.png);
     background-size: cover;
     position: relative;
