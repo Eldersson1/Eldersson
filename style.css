@@ -87,7 +87,7 @@ body {
 
 .project-image {
     height: 250px;
-    background: url('first-image.png') no-repeat center center;
+    background: url('images/first-image.png') no-repeat center center;
     background-size: cover;
     position: relative;
     mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
@@ -96,7 +96,7 @@ body {
 }
 .project-image {
     height: 250px;
-    background: url('mo.png') no-repeat center center;
+    background: url('images/mo.png') no-repeat center center;
     background-size: cover;
     position: relative;
     mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
@@ -169,7 +169,7 @@ body {
 }
 
 .card .project-image {
-    background: url('first-image.png') no-repeat center center;
+    background: url('images/first-image.png') no-repeat center center;
     background-size: cover;
     mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
 }
@@ -217,11 +217,11 @@ body {
 }
 
 .scrolling-wrapper .card .project-image {
-    background: url('first-image.png') no-repeat center center;
+    background: url('images/first-image.png') no-repeat center center;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     height: 250px;
-    background: url('first-image.png') no-repeat center center;
+    background: url('images/first-image.png') no-repeat center center;
     background-size: cover;
     position: relative;
     mask-image: linear-gradient(to bottom, black 60%, transparent 100%);   
@@ -245,7 +245,7 @@ body {
 /* styles.css */
 
 #play-button {
-    background-color: url('play.png');
+    background-color: url('images/play.png');
 }
 
 #play-button svg {
