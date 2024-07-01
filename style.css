@@ -283,7 +283,7 @@ body {
 
 .modal-content {
     position: relative;
-    background-color: #000;
+    background-color: linear-gradient(60deg, #420285, #0847bd);
     margin: 15% auto;
     padding: 20px;
     border-radius: 20px;
