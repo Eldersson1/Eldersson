@@ -11,6 +11,7 @@
     <meta property="og:url" content="https://eldersson.netlify.app/" />
     <link rel="stylesheet" href="style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7513743587463325" crossorigin="anonymous"></script>
+    <script src="code.js"></script>
 </head>
 <body onload="document.body.style.opacity='1'">
     <audio id="background-music" loop>
@@ -25,6 +26,13 @@
     </button>
 
     <img id="profileImage" src="images/profiili.png" alt="Profiilikuva" class="center round">
+
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="videoPlayer" width="560" height="315" src="https://www.youtube.com/embed/SEjlfFNIo_g" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
 
     <p class="big-text">Eldersson</p>
     <p class="small-text">Keksin eri tapoja pelata Minecraftia!</p>
