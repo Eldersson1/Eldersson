@@ -245,18 +245,31 @@ body {
 /* styles.css */
 
 #play-button {
-    background-color: url('images/play.png');
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(60deg, #420285, #08BDBD);
 }
 
 #play-button svg {
-    fill: #000;
-    width: 40px;
-    height: 40px;
+    fill: #fff;
+    width: 30px;
+    height: 30px;
 }
 
 #play-button:hover {
-    background-color: rgb(221, 18, 18);
     transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 #play-button:active {
