@@ -250,6 +250,7 @@ body {
     justify-content: center;
     transition: transform 0.3s, box-shadow 0.3s;
     background: linear-gradient(60deg, #420285, #08BDBD);
+    cursor: pointer;
 }
 
 #play-button svg {
