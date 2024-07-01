@@ -296,7 +296,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    color: #aaa;
+    color: #ffffff;
     font-size: 28px;
     font-weight: bold;
     padding: 10px 15px;
@@ -305,7 +305,7 @@ body {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     cursor: pointer;
 }
