@@ -1,26 +1,21 @@
 @font-face {
     font-family: 'font';
-    src: url('font.ttf');
+    src: url('fonts/font.ttf');
 }
 
 @font-face {
     font-family: 'desc-font';
-    src: url('desc-font.ttf');
-}
-
-@font-face {
-    font-family: 'minecraft';
-    src: url('minecraft.ttf');
+    src: url('fonts/desc-font.ttf');
 }
 
 @font-face {
     font-family: 'roboto';
-    src: url('roboto.ttf');
+    src: url('fonts/roboto.ttf');
 }
 
 @font-face {
     font-family: 'futura';
-    src: url('Futura Bold.otf');
+    src: url('fonts/Futura\ Bold.otf');
 }
 
 body {
