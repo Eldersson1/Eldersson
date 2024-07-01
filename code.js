@@ -9,13 +9,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     profileImage.addEventListener('click', function() {
         videoModal.style.display = 'block';
-        body.classList.add('blur');
         videoPlayer.src = "https://www.youtube.com/embed/SEjlfFNIo_g";
     });
 
     closeModal.addEventListener('click', function() {
-        videoModal.style.display = 'none';
-        body.classList.remove('blur');
+        videoModal.style.display = 'none';;
         videoPlayer.src = ""; // Reset video source to stop playback
     });
 
@@ -23,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
     window.onclick = function(event) {
         if (event.target == videoModal) {
             videoModal.style.display = 'none';
-            body.classList.remove('blur');
             videoPlayer.src = ""; // Reset video source to stop playback
         }
     };
@@ -33,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
         evt = evt || window.event;
         if (evt.key === "Escape") {
             videoModal.style.display = 'none';
-            body.classList.remove('blur');
             videoPlayer.src = ""; // Reset video source to stop playback
         }
     };
