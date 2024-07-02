@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     profileImage.addEventListener('click', function() {
         videoModal.style.display = 'block';
-        videoPlayer.src = "https://www.youtube.com/embed/SEjlfFNIo_g";
+        videoPlayer.src = "https://www.youtube.com/embed/2CpHqGOyiQg";
     });
 
     closeModal.addEventListener('click', function() {
