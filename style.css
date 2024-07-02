@@ -328,3 +328,78 @@ body {
     filter: blur(5px);
     pointer-events: none; /* Prevent interaction with blurred content */
 }
+/* Add media queries for phone screens */
+@media (max-width: 600px) {
+    body {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .center {
+        width: 60%;
+    }
+
+    .big-text {
+        font-size: 30px;
+    }
+
+    .small-text {
+        font-size: 14px;
+        margin-top: -20px;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+    }
+
+    .project-card,
+    .card {
+        max-width: 100%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .project-image,
+    .card .project-image {
+        height: 200px;
+    }
+
+    .project-info h2 {
+        font-size: 20px;
+    }
+
+    .project-info p {
+        font-size: 12px;
+    }
+
+    .skills-text {
+        font-size: 50px;
+    }
+
+    .scrolling-wrapper .card {
+        width: 150px;
+        height: 200px;
+    }
+
+    .scrolling-wrapper .card .project-image {
+        height: 150px;
+    }
+
+    #play-button {
+        width: 40px;
+        height: 40px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    #play-button svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
