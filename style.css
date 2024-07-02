@@ -1,3 +1,4 @@
+/* Add this to your existing CSS */
 @font-face {
     font-family: 'font';
     src: url('fonts/font.ttf');
@@ -36,6 +37,19 @@ body {
 .round {
     border-radius: 50%;
     cursor: pointer;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.round:hover {
+    animation: spin 2s linear infinite;
 }
 
 .big-text {
