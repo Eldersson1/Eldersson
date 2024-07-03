@@ -32,20 +32,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     img.onclick = function() {
         modal.style.display = "block";
-        body.classList.add("blur");
         videoPlayer.src += "?autoplay=1"; // Add autoplay parameter to URL
     }
 
     span.onclick = function() {
         modal.style.display = "none";
-        body.classList.remove("blur");
         videoPlayer.src = videoPlayer.src.replace("?autoplay=1", ""); // Remove autoplay parameter
     }
 
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
-            body.classList.remove("blur");
             videoPlayer.src = videoPlayer.src.replace("?autoplay=1", ""); // Remove autoplay parameter
         }
     }
