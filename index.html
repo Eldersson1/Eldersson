@@ -11,7 +11,7 @@
     <meta property="og:url" content="https://eldersson.netlify.app/" />
     <link rel="stylesheet" href="style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7513743587463325" crossorigin="anonymous"></script>
-    <script src="code.js"></script>
+    <script src="scripts.js"></script>
 </head>
 <body onload="document.body.style.opacity='1'">
     <audio id="background-music" loop>
@@ -19,7 +19,7 @@
         Your browser does not support the audio element.
     </audio>
 
-    <button id="play-button">
+    <button id="play-button" aria-label="Play/Pause Music">
         <svg id="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8 5V19L19 12L8 5Z" fill="currentColor"/>
         </svg>
@@ -30,9 +30,9 @@
 
     <img id="profileImage" src="images/profiili.png" alt="Profiilikuva" class="center round">
 
-    <div id="videoModal" class="modal">
+    <div id="videoModal" class="modal" aria-hidden="true">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close" aria-label="Close">&times;</span>
             <iframe id="videoPlayer" width="560" height="315" src="https://www.youtube.com/embed/SEjlfFNIo_g" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
@@ -47,7 +47,7 @@
         <a href="https://www.twitch.tv/eldersson" target="_blank"><img src="images/twitch-icon.png" class="icon" alt="Twitch"></a>
         <a href="https://discord.gg/Kkvphrwd3m" target="_blank"><img src="images/discord-icon.png" class="icon" alt="Discord"></a>
         <a href="https://github.com/Eldersson1/Eldersson1" target="_blank"><img src="images/github-icon.png" class="icon" alt="GitHub"></a>
-        <a href="elderssonmc@gmail.com" target="_blank"><img src="images/email.png" class="icon" alt="Contact"></a>
+        <a href="mailto:elderssonmc@gmail.com" target="_blank"><img src="images/email.png" class="icon" alt="Contact"></a>
     </div>
 
     <div class="line"></div>
@@ -66,7 +66,7 @@
             <div class="project-image" style="background-image: url('images/mo.png');"></div>
             <div class="project-info">
                 <h2>Modernly Optimized</h2>
-                <p>Trying to get 1.21 relase!</p>
+                <p>Trying to get 1.21 release!</p>
             </div>
         </div>
         <div class="card">
@@ -97,27 +97,8 @@
                 <p>Hopefully soon have my own game!</p>
             </div>
         </div>
-        <div class="card">
-            <div class="project-image" style="background-image: url('images/fn.jpeg');"></div>
-            <div class="project-info">
-                <h2>Fortnite Grind</h2>
-                <p>Practising building and AIM!</p>
-            </div>
-        </div>
     </div>
 
     <div class="line"></div>
-
-    <div style="display: flex; justify-content: center;">
-        <a href="https://www.youtube.com/@Eldersson_YT" target="_blank"><img src="images/youtube-icon.png" class="icon" alt="YouTube"></a>
-        <a href="https://www.instagram.com" target="_blank"><img src="images/instagram-icon.png" class="icon" alt="Instagram"></a>
-        <a href="https://www.tiktok.com" target="_blank"><img src="images/tiktok-icon.png" class="icon" alt="TikTok"></a>
-        <a href="https://www.twitch.tv/eldersson" target="_blank"><img src="images/twitch-icon.png" class="icon" alt="Twitch"></a>
-        <a href="https://discord.gg/Kkvphrwd3m" target="_blank"><img src="images/discord-icon.png" class="icon" alt="Discord"></a>
-        <a href="https://github.com/Eldersson1/Eldersson1" target="_blank"><img src="images/github-icon.png" class="icon" alt="GitHub"></a>
-        <a href="elderssonmc@gmail.com" target="_blank"><img src="images/email.png" class="icon" alt="Contact"></a>
-    </div>
-
-    <script src="scripts.js"></script>
 </body>
 </html>
