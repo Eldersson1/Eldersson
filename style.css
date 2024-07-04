@@ -403,3 +403,24 @@ body {
         width: 90%;
     }
 }
+/* Add keyframes for sliding animation */
+@keyframes slide-left {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to cards */
+.card {
+    opacity: 0;
+    animation: slide-left 1s ease-out forwards;
+}
+
+.hidden {
+    display: none;
+}

@@ -49,3 +49,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+function showCards() {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card, index) => {
+        if (index % 2 === 0) {
+            setTimeout(() => {
+                card.classList.remove('hidden');
+            }, index * 1000); // Delay each card by index * 1 second
+        }
+    });
+}
