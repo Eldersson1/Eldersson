@@ -51,11 +51,22 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 function showCards() {
     const cards = document.querySelectorAll('.card');
-    cards.forEach((card, index) => {
-        if (index % 2 === 0) {
-            setTimeout(() => {
-                card.classList.remove('hidden');
-            }, index * 1000); // Delay each card by index * 1 second
+    let index = 0;
+
+    function revealCard() {
+        if (index < cards.length) {
+            if (index % 2 === 0) {
+                cards[index].classList.remove('hidden');
+                cards[index].style.opacity = '1';
+            }
+            index++;
+            setTimeout(revealCard, 1000); // Reveal every second card every second
+        } else {
+            // Reset index to create an infinite loop
+            index = 0;
+            setTimeout(revealCard, 1000);
         }
-    });
+    }
+
+    revealCard();
 }
