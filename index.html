@@ -3,74 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Eldersson</title>
+    <link rel="icon" type="image/x-icon" href="/images/kuva.png">
+    <meta property="og:title" content="Eldersson" />
+    <meta property="og:description" content="Eldersson's Profile Website" />
+    <meta property="og:image" content="https://eldersson.netlify.app/images/kuva.png" />
+    <meta property="og:url" content="https://eldersson.netlify.app/" />
     <link rel="stylesheet" href="style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7513743587463325" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
 </head>
-<body>
-    <audio id="background-music" src="path/to/your/background-music.mp3" loop></audio>
+<body onload="document.body.style.opacity='1'">
+    <svg class="spinner" viewBox="0 0 50 50">
+        <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+    </svg>
 
-    <div class="center">
-        <img id="profileImage" src="images/profile-image.jpg" alt="Profile Image" class="round">
+    <img id="profileImage" src="images/profiili.png" alt="Profiilikuva" class="center round">
+
+    <div id="videoModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <span class="close" aria-label="Close">&times;</span>
+            <iframe id="videoPlayer" width="560" height="315" src="https://www.youtube.com/embed/2CpHqGOyiQg" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
 
-    <div class="big-text">My Portfolio</div>
-    <div class="small-text">Welcome to my world</div>
+    <p class="big-text">Eldersson</p>
+    <p class="small-text">Keksin eri tapoja pelata Minecraftia!</p>
+
+    <div style="display: flex; justify-content: center;">
+        <a href="https://www.youtube.com/@Eldersson_YT" target="_blank"><img src="images/youtube-icon.png" class="icon" alt="YouTube"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="images/instagram-icon.png" class="icon" alt="Instagram"></a>
+        <a href="https://www.tiktok.com" target="_blank"><img src="images/tiktok-icon.png" class="icon" alt="TikTok"></a>
+        <a href="https://www.twitch.tv/eldersson" target="_blank"><img src="images/twitch-icon.png" class="icon" alt="Twitch"></a>
+        <a href="https://discord.gg/Kkvphrwd3m" target="_blank"><img src="images/discord-icon.png" class="icon" alt="Discord"></a>
+        <a href="https://github.com/Eldersson1/Eldersson1" target="_blank"><img src="images/github-icon.png" class="icon" alt="GitHub"></a>
+        <a href="mailto:elderssonmc@gmail.com" target="_blank"><img src="images/email.png" class="icon" alt="Contact"></a>
+    </div>
+
     <div class="line"></div>
 
+    <div class="project-card">
+        <div class="project-image"></div>
+        <div class="project-info">
+            <h2>Blockbench</h2>
+            <p>I'm currently learning how Blockbench works and I have already made some good designs.</p>
+        </div>
+    </div>
+    <h1 class="skills-text"><ul>Other Projects</ul></h1>
+
     <div class="scrolling-wrapper">
+        <!-- Scrolling cards section starts here -->
         <div class="card">
-            <div class="project-image" style="background-image: url('images/first-image.png');"></div>
+            <div class="project-image" style="background-image: url('images/mo.png');"></div>
             <div class="project-info">
-                <h2>Calculator App</h2>
-                <p>A user-friendly calculator with basic arithmetic operations.</p>
+                <h2>Modernly Optimized</h2>
+                <p>Trying to get 1.21 release!</p>
             </div>
         </div>
         <div class="card">
-            <div class="project-image" style="background-image: url('images/second-image.png');"></div>
+            <div class="project-image" style="background-image: url('images/skyblock.png');"></div>
             <div class="project-info">
-                <h2>Weather App</h2>
-                <p>An app that provides weather updates for different locations.</p>
+                <h2>Hypixel Skyblock</h2>
+                <p>Soon getting Hyperion!</p>
             </div>
         </div>
         <div class="card">
-            <div class="project-image" style="background-image: url('images/third-image.png');"></div>
+            <div class="project-image" style="background-image: url('images/yt.png');"></div>
             <div class="project-info">
-                <h2>Todo List</h2>
-                <p>A simple and effective todo list to manage your tasks.</p>
+                <h2>Youtube Channel</h2>
+                <p>Hopefully hit 1k subscribers soon!</p>
             </div>
         </div>
         <div class="card">
-            <div class="project-image" style="background-image: url('images/fourth-image.png');"></div>
+            <div class="project-image" style="background-image: url('images/noteblock.png');"></div>
             <div class="project-info">
-                <h2>Portfolio Website</h2>
-                <p>A personal portfolio website to showcase projects and skills.</p>
+                <h2>Noteblock Studio</h2>
+                <p>Making my very own noteblock music!</p>
             </div>
         </div>
         <div class="card">
-            <div class="project-image" style="background-image: url('images/fifth-image.png');"></div>
+            <div class="project-image" style="background-image: url('images/code.png');"></div>
             <div class="project-info">
-                <h2>Music Player</h2>
-                <p>An online music player with playlist management.</p>
+                <h2>Python coding</h2>
+                <p>Hopefully soon have my own game!</p>
             </div>
         </div>
-        <!-- Add more cards as needed -->
+        <div class="card">
+            <div class="project-image" style="background-image: url('images/fn.jpeg');"></div>
+            <div class="project-info">
+                <h2>Fortnite</h2>
+                <p>Longest winstreak 10 crowns!</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="project-image" style="background-image: url('images/mc.png');"></div>
+            <div class="project-info">
+                <h2>Minecraft Server</h2>
+                <p>Trying to make my server idea into reality!</p>
+            </div>
+        </div>
+        <!-- Repeat the cards as needed -->
+        <!-- Ensure there are enough cards to fill the scrolling area -->
+        <!-- Scrolling cards section ends here -->
     </div>
 
-    <button id="play-button">
-        <img id="play-icon" src="images/play-icon.png" alt="Play">
-        <img id="stop-icon" src="images/stop-icon.png" alt="Stop">
+    <audio id="background-music" loop>
+        <source src="others/music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button id="play-button" aria-label="Play/Pause Music">
+        <svg id="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 5V19L19 12L8 5Z" fill="currentColor"/>
+        </svg>
+        <svg id="stop-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+            <rect x="6" y="6" width="12" height="12" fill="currentColor"/>
+        </svg>
     </button>
 
-    <div id="videoModal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <video id="videoPlayer" controls>
-                <source src="videos/your-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
+    <div class="line"></div>
 
-    <script src="scripts.js"></script>
 </body>
 </html>
