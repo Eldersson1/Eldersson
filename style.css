@@ -89,6 +89,116 @@ body {
     transform: scale(1.2);
 }
 
+.project-card {
+    background: linear-gradient(60deg, #0a7be6, #003dc2);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 700px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image {
+    height: 400px;
+    background-image: url(images/first-image.png);
+    background-size: cover;
+    position: relative;
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.project-info {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.project-info h2, .project-info p {
+    margin: 0;
+}
+
+.project-info h2 {
+    font-family: 'font';
+    font-size: 31px;
+    color: black;
+}
+
+.project-info p {
+    font-family: 'desc-font';
+    font-size: 16px;
+    color: black;
+}
+
+.skills {
+    text-align: center;
+    margin: 20px auto;
+    font-family: 'font';
+    font-size: 50px;
+}
+
+.progress-bar {
+    width: 80%;
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+.progress {
+    height: 20px;
+    background-color: #76c7c0;
+    border-radius: 25px;
+}
+
+.moving-cards {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-around;
+    margin: 20px auto;
+    width: 100%;
+    position: relative;
+    height: 320px;
+}
+
+.card {
+    background: linear-gradient(60deg, #0a7be6, #003dc2);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 0 0 250px;
+    margin: 0 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card .project-image {
+    height: 250px;
+    background-size: cover;
+    position: relative;
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card .project-info {
+    padding: 10px;
+}
+
+.card .project-info h2 {
+    font-family: 'font';
+    font-size: 18px;
+    color: black;
+}
+
+.card .project-info p {
+    font-family: 'desc-font';
+    font-size: 14px;
+    color: black;
+}
+
 .skills-text {
     font-family: 'futura';
     font-size: 100px;
@@ -96,6 +206,82 @@ body {
     text-align: center;
 }
 
+.scrolling-wrapper {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.scrolling-wrapper .card {
+    display: inline-block;
+    background: linear-gradient(60deg, #0a7be6, #003dc2);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.scrolling-wrapper .card .project-image {
+    height: 250px;
+    background-size: cover;
+    position: relative;
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.scrolling-wrapper .card .project-info {
+    padding: 10px;
+}
+
+.scrolling-wrapper .card .project-info h2 {
+    font-family: 'font';
+    font-size: 18px;
+    color: black;
+}
+
+.scrolling-wrapper .card .project-info p {
+    font-family: 'desc-font';
+    font-size: 14px;
+    color: black;
+}
+
+#play-button {
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(60deg, #420285, #08BDBD);
+    cursor: pointer;
+}
+
+#play-button svg {
+    fill: #fff;
+    width: 30px;
+    height: 30px;
+}
+
+#play-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#play-button:active {
+    transform: scale(1.05);
+}
 /* Modal styles */
 .modal {
     display: none;
@@ -105,69 +291,205 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
     overflow: auto;
-    background-color: rgba(0,0,0,0.7);
 }
 
 .modal-content {
-    background-color: #fefefe;
+    position: relative;
+    background-color: linear-gradient(60deg, #420285, #0847bd);
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid #888;
+    border-radius: 20px;
     width: 80%;
-    max-width: 700px;
-    position: relative;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .close {
-    color: #aaa;
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #ffffff;
     font-size: 28px;
     font-weight: bold;
+    padding: 10px 15px;
     cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     cursor: pointer;
 }
 
-.project-image {
-    width: 100%;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
+.blur {
+    filter: blur(5px);
+    pointer-events: none; /* Prevent interaction with blurred content */
+}
+/* Add media queries for phone screens */
+@media (max-width: 600px) {
+    body {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .center {
+        width: 60%;
+    }
+
+    .big-text {
+        font-size: 30px;
+    }
+
+    .small-text {
+        font-size: 14px;
+        margin-top: -20px;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+    }
+
+    .project-card,
+    .card {
+        max-width: 100%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .project-image,
+    .card .project-image {
+        height: 200px;
+    }
+
+    .project-info h2 {
+        font-size: 20px;
+    }
+
+    .project-info p {
+        font-size: 12px;
+    }
+
+    .skills-text {
+        font-size: 50px;
+    }
+
+    .scrolling-wrapper .card {
+        width: 150px;
+        height: 200px;
+    }
+
+    .scrolling-wrapper .card .project-image {
+        height: 150px;
+    }
+
+    #play-button {
+        width: 40px;
+        height: 40px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    #play-button svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+/* Add keyframes for sliding animation */
+@keyframes slide-left {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
+/* Apply the animation to cards */
 .card {
-    min-width: 300px;
-    margin-right: 20px;
-    opacity: 1;
-    animation: slide-left 20s linear infinite;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    overflow: hidden;
+    opacity: 0;
+    animation: slide-left 1s ease-out forwards;
 }
 
-.project-info {
-    padding: 20px;
+.hidden {
+    display: none;
 }
-
+/* Container styling */
 .scrolling-wrapper {
     display: flex;
-    overflow: hidden;
+    overflow: hidden; /* Hide overflow to create sliding effect */
     white-space: nowrap;
-    padding-bottom: 10px;
 }
 
+/* Card styling */
+.card {
+    min-width: 200px;
+    margin-right: 20px;
+    opacity: 0;
+    animation: slide-left 10s linear infinite;
+}
+
+/* Infinite sliding animation */
 @keyframes slide-left {
     0% {
-        transform: translateX(0%);
+        transform: translateX(100%);
+        opacity: 1;
     }
     100% {
         transform: translateX(-100%);
+        opacity: 1;
     }
 }
+
+/* Hidden class for initially hiding cards */
+.hidden {
+    display: none;
+}
+.spinner {
+    animation: rotate 2s linear infinite;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    width: 50px;
+    height: 50px;
+    
+    & .path {
+      stroke: hsl(210, 70, 75);
+      stroke-linecap: round;
+      animation: dash 1.5s ease-in-out infinite;
+    }
+    
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1, 150;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -35;
+    }
+    100% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -124;
+    }
+  }
