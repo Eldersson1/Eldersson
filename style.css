@@ -263,7 +263,8 @@ body {
     cursor: pointer;
 }
 
-#play-icon, #stop-icon {
+#play-icon,
+#stop-icon {
     width: 100%;
     height: 100%;
 }
