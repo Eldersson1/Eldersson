@@ -20,10 +20,11 @@
 
     <img id="profileImage" src="images/profiili.png" alt="Profiilikuva" class="center round">
 
-    <div id="videoModal" class="modal" aria-hidden="true">
+    <div id="modal" class="modal">
         <div class="modal-content">
-            <span class="close" aria-label="Close">&times;</span>
-            <iframe id="videoPlayer" width="560" height="315" src="https://www.youtube.com/embed/2CpHqGOyiQg" frameborder="0" allowfullscreen></iframe>
+            <span class="close">&times;</span>
+            <h2>Modal Title</h2>
+            <p>This is the modal content. It can include text, images, or other elements.</p>
         </div>
     </div>
 
@@ -105,9 +106,10 @@
             </div>
         </div>
     </div>
-    <div id="gameContainer" class="game-container">
-        <div id="target" class="target"></div>
-        <div id="score">Score: 0</div>
+    <div class="game-container">
+        <h2>Fun Game</h2>
+        <button id="startGame">Start Game</button>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
     </div>
     <audio id="background-music" loop>
         <source src="others/music.mp3" type="audio/mpeg">
