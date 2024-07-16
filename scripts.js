@@ -57,4 +57,30 @@ document.addEventListener("DOMContentLoaded", () => {
             stopIcon.style.display = 'none';
         }
     });
+
+    // Game Logic
+    const gameContainer = document.getElementById('gameContainer');
+    const target = document.getElementById('target');
+    const scoreDisplay = document.getElementById('score');
+    let score = 0;
+
+    target.addEventListener('click', () => {
+        score++;
+        scoreDisplay.textContent = `Score: ${score}`;
+        moveTarget();
+    });
+
+    function moveTarget() {
+        const containerWidth = gameContainer.offsetWidth;
+        const containerHeight = gameContainer.offsetHeight;
+        const targetSize = target.offsetWidth;
+
+        const randomX = Math.random() * (containerWidth - targetSize);
+        const randomY = Math.random() * (containerHeight - targetSize);
+
+        target.style.left = `${randomX}px`;
+        target.style.top = `${randomY}px`;
+    }
+
+    moveTarget();
 });
