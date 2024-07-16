@@ -19,4 +19,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
     createSeamlessScroll();
     scrollingWrapper.addEventListener('scroll', adjustScroll);
+
+    const profileImage = document.getElementById('profileImage');
+    const videoModal = document.getElementById('videoModal');
+    const videoPlayer = document.getElementById('videoPlayer');
+    const closeButton = document.querySelector('.close');
+    const playButton = document.getElementById('play-button');
+    const backgroundMusic = document.getElementById('background-music');
+    const playIcon = document.getElementById('play-icon');
+    const stopIcon = document.getElementById('stop-icon');
+
+    profileImage.addEventListener('click', () => {
+        videoModal.style.display = 'block';
+        videoPlayer.setAttribute('aria-hidden', 'false');
+    });
+
+    closeButton.addEventListener('click', () => {
+        videoModal.style.display = 'none';
+        videoPlayer.setAttribute('aria-hidden', 'true');
+        videoPlayer.src = videoPlayer.src; // Stop the video
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target == videoModal) {
+            videoModal.style.display = 'none';
+            videoPlayer.setAttribute('aria-hidden', 'true');
+            videoPlayer.src = videoPlayer.src; // Stop the video
+        }
+    });
+
+    playButton.addEventListener('click', () => {
+        if (backgroundMusic.paused) {
+            backgroundMusic.play();
+            playIcon.style.display = 'none';
+            stopIcon.style.display = 'block';
+        } else {
+            backgroundMusic.pause();
+            playIcon.style.display = 'block';
+            stopIcon.style.display = 'none';
+        }
+    });
 });

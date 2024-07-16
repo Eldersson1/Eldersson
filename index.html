@@ -11,7 +11,7 @@
     <meta property="og:url" content="https://eldersson.netlify.app/" />
     <link rel="stylesheet" href="style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7513743587463325" crossorigin="anonymous"></script>
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
 </head>
 <body onload="document.body.style.opacity='1'">
     <svg class="spinner" viewBox="0 0 50 50">
@@ -51,9 +51,10 @@
             <p>I'm currently learning how Blockbench works and I have already made some good designs.</p>
         </div>
     </div>
+
     <h1 class="skills-text"><ul>Other Projects</ul></h1>
 
-    <div class="scrolling-wrapper">
+    <div class="scrolling-wrapper" id="scrollingWrapper">
         <div class="card">
             <div class="project-image" style="background-image: url('images/mo.png');"></div>
             <div class="project-info">
@@ -96,21 +97,15 @@
                 <p>Longest winstreak 10 crowns!</p>
             </div>
         </div>
-    <div class="card">
-        <div class="project-image" style="background-image: url('images/mc.png');"></div>
-        <div class="project-info">
-            <h2>Minecraft Server</h2>
-            <p>Trying to make my server idea into reality!</p>
+        <div class="card">
+            <div class="project-image" style="background-image: url('images/mc.png');"></div>
+            <div class="project-info">
+                <h2>Minecraft Server</h2>
+                <p>Trying to make my server idea into reality!</p>
+            </div>
         </div>
     </div>
-</div>
-    <div class="card">
-        <div class="project-image" style="background-image: url('images/mc.png');"></div>
-        <div class="project-info">
-            <h2>Minecraft Server</h2>
-            <p>Trying to make my server idea into reality!</p>
-        </div>
-    </div>
+    
     <audio id="background-music" loop>
         <source src="others/music.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
