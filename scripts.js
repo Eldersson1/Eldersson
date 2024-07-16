@@ -2,29 +2,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollingWrapper = document.getElementById("scrollingWrapper");
     const cards = Array.from(scrollingWrapper.children);
     
-    // Clone the initial set of cards
-    const clones = cards.map(card => card.cloneNode(true));
-    clones.forEach(clone => scrollingWrapper.appendChild(clone));
+    // Clone the initial set of cards and append them to the wrapper
+    cards.forEach(card => scrollingWrapper.appendChild(card.cloneNode(true)));
     
-    // Adjust scroll position when it reaches the threshold
-    function adjustScroll() {
-        const halfScrollWidth = scrollingWrapper.scrollWidth / 2;
-        
-        if (scrollingWrapper.scrollLeft >= halfScrollWidth) {
-            scrollingWrapper.scrollLeft -= halfScrollWidth;
-        } else if (scrollingWrapper.scrollLeft <= 0) {
-            scrollingWrapper.scrollLeft += halfScrollWidth;
-        }
-    }
-
+    let scrollSpeed = 1; // Adjust this value to control the speed of scrolling
+    
     // Smooth scrolling effect
     function smoothScroll() {
-        scrollingWrapper.scrollLeft += 1; // Adjust the speed as needed
+        scrollingWrapper.scrollLeft += scrollSpeed;
+        if (scrollingWrapper.scrollLeft >= scrollingWrapper.scrollWidth / 2) {
+            scrollingWrapper.scrollLeft = 0;
+        }
         requestAnimationFrame(smoothScroll);
     }
     
     smoothScroll();
-    scrollingWrapper.addEventListener('scroll', adjustScroll);
 
     const profileImage = document.getElementById('profileImage');
     const videoModal = document.getElementById('videoModal');
