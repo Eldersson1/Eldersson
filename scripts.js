@@ -1,12 +1,20 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const projectContainer = document.getElementById('project-container');
-    const cards = projectContainer.children;
-    const numberOfCards = cards.length;
+document.addEventListener("DOMContentLoaded", () => {
+    const scrollingWrapper = document.getElementById("scrollingWrapper");
+    const cards = Array.from(scrollingWrapper.children);
 
-    for (let i = 0; i < numberOfCards; i++) {
-        const cardClone = cards[i].cloneNode(true);
-        projectContainer.appendChild(cardClone);
+    function appendCards() {
+        cards.forEach(card => {
+            const clone = card.cloneNode(true);
+            scrollingWrapper.appendChild(clone);
+        });
     }
+
+    scrollingWrapper.addEventListener('scroll', () => {
+        if (scrollingWrapper.scrollLeft + scrollingWrapper.clientWidth >= scrollingWrapper.scrollWidth - 5) {
+            appendCards();
+        }
+    });
+});
 
     // Uncomment the following lines to create an infinite loop
     // const observer = new IntersectionObserver((entries) => {
@@ -21,4 +29,3 @@ document.addEventListener("DOMContentLoaded", function() {
     // });
 
     // observer.observe(projectContainer.lastElementChild);
-});
