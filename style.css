@@ -291,24 +291,29 @@ body {
 .modal {
     display: none;
     position: fixed;
-    z-index: 9999;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
     overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
-    position: relative;
-    background-color: linear-gradient(60deg, #420285, #0847bd);
+    background-color: #fff;
     margin: 15% auto;
     padding: 20px;
-    border-radius: 20px;
-    width: 60%;
-    max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-top: 0;
 }
 
 .close {
