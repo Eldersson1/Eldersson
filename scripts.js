@@ -1,71 +1,48 @@
-// Infinite scroll
-document.querySelector('.scrolling-wrapper').addEventListener('scroll', function() {
-    let scrollWidth = this.scrollWidth;
-    let scrollLeft = this.scrollLeft;
-    let clientWidth = this.clientWidth;
-
-    if (scrollLeft + clientWidth >= scrollWidth - 5) {
-        this.scrollLeft = 0;
-    }
-    if (scrollLeft === 0) {
-        this.scrollLeft = scrollWidth - clientWidth;
-    }
-});
-
 // Modal functionality
-let modal = document.getElementById("modal");
-let btn = document.querySelectorAll(".card");
-let span = document.getElementsByClassName("close")[0];
+var modal = document.getElementById("myModal");
+var profilePic = document.getElementById("profilePic");
+var span = document.getElementsByClassName("close")[0];
 
-btn.forEach(card => {
-    card.onclick = function() {
-        modal.style.display = "block";
-    }
-});
+// When the user clicks on the profile picture, open the modal
+profilePic.onclick = function() {
+    modal.style.display = "block";
+}
 
+// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
 }
 
+// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target === modal) {
+    if (event.target == modal) {
         modal.style.display = "none";
     }
 }
 
-// Basic game setup
-document.getElementById("startGame").addEventListener("click", function() {
-    let canvas = document.getElementById("gameCanvas");
-    let context = canvas.getContext("2d");
-    
-    let x = canvas.width / 2;
-    let y = canvas.height - 30;
-    let dx = 2;
-    let dy = -2;
-    let ballRadius = 10;
+// Infinite scrolling cards
+const cardWrapper = document.querySelector('.card-wrapper');
 
-    function drawBall() {
-        context.beginPath();
-        context.arc(x, y, ballRadius, 0, Math.PI * 2);
-        context.fillStyle = "#007bff";
-        context.fill();
-        context.closePath();
+function createCard(content) {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerText = content;
+    return card;
+}
+
+function loadCards() {
+    for (let i = 0; i < 10; i++) {
+        const card = createCard('Card Content ' + (Math.random() * 1000).toFixed(0));
+        cardWrapper.appendChild(card);
     }
+}
 
-    function draw() {
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        drawBall();
-        
-        if(x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
-            dx = -dx;
-        }
-        if(y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
-            dy = -dy;
-        }
+// Initial load
+loadCards();
 
-        x += dx;
-        y += dy;
+// Load more cards when scrolled to the bottom
+window.addEventListener('scroll', () => {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
+        loadCards();
     }
-
-    setInterval(draw, 10);
 });
