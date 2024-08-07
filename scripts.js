@@ -63,7 +63,7 @@ function loadCards() {
     });
 }
 
-const observer = new IntersectionObserver((entries, observer) => {
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             loadCards();
