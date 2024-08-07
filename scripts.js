@@ -1,6 +1,6 @@
 // Modal functionality
-var modal = document.getElementById("myModal");
-var profilePic = document.getElementById("profilePic");
+var modal = document.getElementById("modal");
+var profilePic = document.getElementById("profileImage");
 var span = document.getElementsByClassName("close")[0];
 
 profilePic.onclick = function() {
@@ -18,7 +18,7 @@ window.onclick = function(event) {
 }
 
 // Infinite scrolling cards
-const cardWrapper = document.querySelector('.card-wrapper');
+const cardWrapper = document.getElementById('scrollingWrapper');
 
 function createCard(content) {
     const card = document.createElement('div');
@@ -28,7 +28,7 @@ function createCard(content) {
 }
 
 function loadCards() {
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 5; i++) {
         const card = createCard('Card Content ' + (Math.random() * 1000).toFixed(0));
         cardWrapper.appendChild(card);
     }
@@ -37,7 +37,7 @@ function loadCards() {
 loadCards();
 
 window.addEventListener('scroll', () => {
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
         loadCards();
     }
 });
@@ -50,4 +50,27 @@ function downloadFile(filename) {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+}
+
+// Play/Pause background music
+const playButton = document.getElementById('play-button');
+const backgroundMusic = document.getElementById('background-music');
+const playIcon = document.getElementById('play-icon');
+const stopIcon = document.getElementById('stop-icon');
+
+playButton.addEventListener('click', () => {
+    if (backgroundMusic.paused) {
+        backgroundMusic.play();
+        playIcon.style.display = 'none';
+        stopIcon.style.display = 'block';
+    } else {
+        backgroundMusic.pause();
+        playIcon.style.display = 'block';
+        stopIcon.style.display = 'none';
+    }
+});
+
+// Page opacity on load
+window.onload = function() {
+    document.body.style.opacity = '1';
 }
