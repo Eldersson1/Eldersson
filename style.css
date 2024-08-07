@@ -525,7 +525,7 @@ body {
 .downlooads-text {
     font-family: roboto;
     text-align: center;
-    font-size: large;
+    font-size: 100px;
 }
 
 .download-item .file-name {
