@@ -3,12 +3,16 @@ var modal = document.getElementById("modal");
 var profilePic = document.getElementById("profileImage");
 var span = document.getElementsByClassName("close")[0];
 
-profilePic.onclick = function() {
-    modal.style.display = "block";
+if (profilePic) {
+    profilePic.onclick = function() {
+        modal.style.display = "block";
+    }
 }
 
-span.onclick = function() {
-    modal.style.display = "none";
+if (span) {
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
 }
 
 window.onclick = function(event) {
@@ -17,9 +21,19 @@ window.onclick = function(event) {
     }
 }
 
-// Infinite scrolling cards
+// Infinite scrolling functionality
 const cardWrapper = document.getElementById('scrollingWrapper');
 const scrollEnd = document.getElementById('scroll-end');
+
+const newCards = [
+    { image: 'images/mo.png', title: 'Modernly Optimized', description: 'Trying to get 1.21 release!' },
+    { image: 'images/skyblock.png', title: 'Hypixel Skyblock', description: 'Soon getting Hyperion!' },
+    { image: 'images/yt.png', title: 'Youtube Channel', description: 'Hopefully hit 1k subscribers soon!' },
+    { image: 'images/noteblock.png', title: 'Noteblock Studio', description: 'Making my very own noteblock music!' },
+    { image: 'images/code.png', title: 'Python coding', description: 'Hopefully soon have my own game!' },
+    { image: 'images/fn.jpeg', title: 'Fortnite', description: 'Longest winstreak 10 crowns!' },
+    { image: 'images/mc.png', title: 'Minecraft Server', description: 'Trying to make my server idea into reality!' }
+];
 
 function createCard(image, title, description) {
     const card = document.createElement('div');
@@ -47,55 +61,43 @@ function createCard(image, title, description) {
 }
 
 function loadCards() {
-    const newCards = [
-        { image: 'images/mo.png', title: 'Modernly Optimized', description: 'Trying to get 1.21 release!' },
-        { image: 'images/skyblock.png', title: 'Hypixel Skyblock', description: 'Soon getting Hyperion!' },
-        { image: 'images/yt.png', title: 'Youtube Channel', description: 'Hopefully hit 1k subscribers soon!' },
-        { image: 'images/noteblock.png', title: 'Noteblock Studio', description: 'Making my very own noteblock music!' },
-        { image: 'images/code.png', title: 'Python coding', description: 'Hopefully soon have my own game!' },
-        { image: 'images/fn.jpeg', title: 'Fortnite', description: 'Longest winstreak 10 crowns!' },
-        { image: 'images/mc.png', title: 'Minecraft Server', description: 'Trying to make my server idea into reality!' }
-    ];
-
     newCards.forEach(cardData => {
         const card = createCard(cardData.image, cardData.title, cardData.description);
-        cardWrapper.insertBefore(card, scrollEnd);
+        cardWrapper.appendChild(card);
     });
 }
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            loadCards();
-        }
-    });
-}, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 1.0
-});
+// Intersection Observer to trigger load more cards when scrolling
+const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+        loadCards();
+        observer.unobserve(entries[0].target); // Stop observing once cards are loaded
+    }
+}, { threshold: 1.0 });
 
-observer.observe(scrollEnd);
+if (scrollEnd) {
+    observer.observe(scrollEnd);
+}
 
-// Download functionality
-document.getElementById('downloadButton').addEventListener('click', function() {
-    window.location.href = 'others/Eldersson.zip';
-});
-
-// Play/pause background music
-const playButton = document.getElementById('play-button');
+// Play/Pause background music functionality
 const backgroundMusic = document.getElementById('background-music');
+const playButton = document.getElementById('play-button');
 const playIcon = document.getElementById('play-icon');
 const stopIcon = document.getElementById('stop-icon');
 
-playButton.addEventListener('click', function() {
-    if (backgroundMusic.paused) {
-        backgroundMusic.play();
-        playIcon.style.display = 'none';
-        stopIcon.style.display = 'block';
-    } else {
-        backgroundMusic.pause();
-        playIcon.style.display = 'block';
-        stopIcon.style.display = 'none';
-    }
-});
+if (playButton) {
+    playButton.addEventListener('click', () => {
+        if (backgroundMusic.paused) {
+            backgroundMusic.play();
+            playIcon.style.display = 'none';
+            stopIcon.style.display = 'block';
+        } else {
+            backgroundMusic.pause();
+            playIcon.style.display = 'block';
+            stopIcon.style.display = 'none';
+        }
+    });
+}
+
+// Initial card loading
+loadCards();
