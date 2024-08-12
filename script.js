@@ -1,5 +1,29 @@
+// Modal functionality
+var modal = document.getElementById("modal");
+var profilePic = document.getElementById("profileImage");
+var span = document.getElementsByClassName("close")[0];
+
+if (profilePic) {
+    profilePic.onclick = function() {
+        modal.style.display = "block";
+    }
+}
+
+if (span) {
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
 // Infinite scrolling functionality
 const cardWrapper = document.getElementById('scrollingWrapper');
+const scrollEnd = document.getElementById('scroll-end');
 
 const newCards = [
     { image: 'images/mo.png', title: 'Modernly Optimized', description: 'Trying to get 1.21 release!' },
@@ -17,7 +41,7 @@ function createCard(image, title, description) {
     
     const projectImage = document.createElement('div');
     projectImage.className = 'project-image';
-    projectImage.style.backgroundImage = `url('${image}')`;
+    projectImage.style.backgroundImage = url('${image}');
     card.appendChild(projectImage);
     
     const projectInfo = document.createElement('div');
@@ -50,3 +74,30 @@ const observer = new IntersectionObserver(entries => {
         observer.unobserve(entries[0].target); // Stop observing once cards are loaded
     }
 }, { threshold: 1.0 });
+
+if (scrollEnd) {
+    observer.observe(scrollEnd);
+}
+
+// Play/Pause background music functionality
+const backgroundMusic = document.getElementById('background-music');
+const playButton = document.getElementById('play-button');
+const playIcon = document.getElementById('play-icon');
+const stopIcon = document.getElementById('stop-icon');
+
+if (playButton) {
+    playButton.addEventListener('click', () => {
+        if (backgroundMusic.paused) {
+            backgroundMusic.play();
+            playIcon.style.display = 'none';
+            stopIcon.style.display = 'block';
+        } else {
+            backgroundMusic.pause();
+            playIcon.style.display = 'block';
+            stopIcon.style.display = 'none';
+        }
+    });
+}
+
+// Initial card loading
+loadCards();
