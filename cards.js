@@ -1,26 +1,3 @@
-// Modal functionality
-var modal = document.getElementById("modal");
-var profilePic = document.getElementById("profileImage");
-var span = document.getElementsByClassName("close")[0];
-
-if (profilePic) {
-    profilePic.onclick = function() {
-        modal.style.display = "block";
-    }
-}
-
-if (span) {
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
 // Infinite scrolling functionality
 const cardWrapper = document.getElementById('scrollingWrapper');
 const scrollEnd = document.getElementById('scroll-end');
@@ -67,6 +44,7 @@ function loadCards() {
     });
 }
 
+// Intersection Observer to trigger load more cards when scrolling
 const observer = new IntersectionObserver(entries => {
     if (entries[0].isIntersecting) {
         loadCards();
@@ -77,25 +55,3 @@ const observer = new IntersectionObserver(entries => {
 if (scrollEnd) {
     observer.observe(scrollEnd);
 }
-
-// Play/Pause background music functionality
-const backgroundMusic = document.getElementById('background-music');
-const playButton = document.getElementById('play-button');
-const playIcon = document.getElementById('play-icon');
-const stopIcon = document.getElementById('stop-icon');
-
-if (playButton) {
-    playButton.addEventListener('click', () => {
-        if (backgroundMusic.paused) {
-            backgroundMusic.play();
-            playIcon.style.display = 'none';
-            stopIcon.style.display = 'block';
-        } else {
-            backgroundMusic.pause();
-            playIcon.style.display = 'block';
-            stopIcon.style.display = 'none';
-        }
-    });
-}
-
-// Initial card loading
