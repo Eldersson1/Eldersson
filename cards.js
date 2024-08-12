@@ -1,6 +1,5 @@
 // Infinite scrolling functionality
 const cardWrapper = document.getElementById('scrollingWrapper');
-const scrollEnd = document.getElementById('scroll-end');
 
 const newCards = [
     { image: 'images/mo.png', title: 'Modernly Optimized', description: 'Trying to get 1.21 release!' },
