@@ -50,7 +50,3 @@ const observer = new IntersectionObserver(entries => {
         observer.unobserve(entries[0].target); // Stop observing once cards are loaded
     }
 }, { threshold: 1.0 });
-
-if (scrollEnd) {
-    observer.observe(scrollEnd);
-}
