@@ -1,25 +1,25 @@
 // Modal functionality
-var modal = document.getElementById("modal");
-var profilePic = document.getElementById("profileImage");
-var span = document.getElementsByClassName("close")[0];
+const modal = document.getElementById("modal");
+const profilePic = document.getElementById("profileImage");
+const span = document.getElementsByClassName("close")[0];
 
 if (profilePic) {
-    profilePic.onclick = function() {
+    profilePic.onclick = () => {
         modal.style.display = "block";
-    }
+    };
 }
 
 if (span) {
-    span.onclick = function() {
+    span.onclick = () => {
         modal.style.display = "none";
-    }
+    };
 }
 
-window.onclick = function(event) {
-    if (event.target == modal) {
+window.onclick = (event) => {
+    if (event.target === modal) {
         modal.style.display = "none";
     }
-}
+};
 
 // Infinite scrolling functionality
 const cardWrapper = document.getElementById('scrollingWrapper');
@@ -41,7 +41,7 @@ function createCard(image, title, description) {
     
     const projectImage = document.createElement('div');
     projectImage.className = 'project-image';
-    projectImage.style.backgroundImage = url('${image}');
+    projectImage.style.backgroundImage = `url('${image}')`;
     card.appendChild(projectImage);
     
     const projectInfo = document.createElement('div');
@@ -69,10 +69,12 @@ function loadCards() {
 
 // Intersection Observer to trigger load more cards when scrolling
 const observer = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting) {
-        loadCards();
-        observer.unobserve(entries[0].target); // Stop observing once cards are loaded
-    }
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            loadCards();
+            observer.unobserve(entry.target); // Stop observing once cards are loaded
+        }
+    });
 }, { threshold: 1.0 });
 
 if (scrollEnd) {
