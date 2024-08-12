@@ -209,6 +209,7 @@ body {
 .scrolling-wrapper {
     display: flex;
     overflow-x: auto;
+    width: 1500px; /* Adjust this value according to the number of cards you want to display */
     scroll-behavior: smooth;
 }
 
