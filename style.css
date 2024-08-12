@@ -209,7 +209,6 @@ body {
 .scrolling-wrapper {
     display: flex;
     overflow-x: auto;
-    white-space: nowrap;
     scroll-behavior: smooth;
 }
 
