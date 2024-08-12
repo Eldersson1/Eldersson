@@ -99,4 +99,3 @@ if (playButton) {
 }
 
 // Initial card loading
-loadCards();
