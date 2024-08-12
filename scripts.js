@@ -67,7 +67,6 @@ function loadCards() {
     });
 }
 
-// Intersection Observer to trigger load more cards when scrolling
 const observer = new IntersectionObserver(entries => {
     if (entries[0].isIntersecting) {
         loadCards();
