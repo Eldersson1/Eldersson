@@ -251,7 +251,7 @@ body {
 }
 
 .scrolling-wrapper .card .project-image {
-    height: 270px;
+    height: 200px;
     background-size: cover;
     position: relative;
     mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
