@@ -251,7 +251,7 @@ body {
 }
 
 .scrolling-wrapper .card .project-image {
-    height: 250px;
+    height: 270px;
     background-size: cover;
     position: relative;
     mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
@@ -270,7 +270,7 @@ body {
 }
 
 .scrolling-wrapper .card .project-info p {
-    font-family: var(--third-font);
+    font-family: var(--last-font);
     font-size: 14px;
     color: black;
 }
