@@ -467,19 +467,19 @@ body {
 }
 
 .card:nth-child(2) {
-    animation-delay: 5s; /* Increased delay */
+    animation-delay: 4s; /* Staggered delay */
 }
 
 .card:nth-child(3) {
-    animation-delay: 10s; /* Increased delay */
+    animation-delay: 8s; /* Staggered delay */
 }
 
 .card:nth-child(4) {
-    animation-delay: 15s; /* Increased delay */
+    animation-delay: 12s; /* Staggered delay */
 }
 
 .card:nth-child(5) {
-    animation-delay: 20s; /* Increased delay */
+    animation-delay: 16s; /* Staggered delay */
 }
 
 /* Infinite sliding animation */
@@ -488,11 +488,11 @@ body {
         transform: translateX(100%); /* Start off-screen to the right */
         opacity: 1;
     }
-    15% {
+    20% {
         transform: translateX(0); /* Fully on-screen */
         opacity: 1;
     }
-    85% {
+    80% {
         transform: translateX(0); /* Hold position */
         opacity: 1;
     }
@@ -501,7 +501,6 @@ body {
         opacity: 1;
     }
 }
-
 /* Hidden class for initially hiding cards */
 .hidden {
     display: none;
