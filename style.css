@@ -1,7 +1,7 @@
 /* Add this to your existing CSS */
 @font-face {
-    font-family: 'font';
-    src: url('fonts/font.ttf');
+    font-family: 'luckiest-guy';
+    src: url('fonts/luckiest-guy.ttf');
 }
 
 @font-face {
@@ -18,9 +18,29 @@
     font-family: 'futura';
     src: url('fonts/Futura Bold.otf');
 }
-
+:root{
+    --base-color: #07090c;
+    --text-color: #d1d7e2;
+    --secondary-text-color: #858992;
+    --secondary-color: #1e232b;
+    --bright-shine: #4b5869;
+    --t-secondary-color: #1e232b83;
+    --main-gradient: linear-gradient(to bottom right, #44bdff, #0071FF);
+    --background: linear-gradient(60deg, #420285, #08BDBD);
+    --background-bottom: rgb(41, 39, 39);
+    --main-color: #0071FF;
+    --t-main-color: hsla(213, 100%, 50%, 0.15);
+    --accent-color: #ffd044;
+    --50-accent-color: rgba(255, 208, 68, 0.5);
+    --t-accent-color: rgba(255, 208, 68, 0.1);
+    --primary-font: futura;
+    --secondary-font: roboto;
+    --third-font: luckiest-guy;
+    --last-font: desc-font;
+    --card-background: linear-gradient(60deg, #0a7be6, #003dc2);
+  }
 body {
-    background: linear-gradient(60deg, #420285, #08BDBD);
+    background: var(--background);
     padding: 10px;
     opacity: 0;
     transition: opacity 2s;
@@ -56,7 +76,7 @@ body {
     font-size: 50px;
     color: black;
     text-align: center;
-    font-family: 'font';
+    font-family: var(--third-font);
     font-weight: bold;
 }
 
@@ -64,7 +84,7 @@ body {
     font-size: 20px;
     color: black;
     text-align: center;
-    font-family: 'desc-font';
+    font-family: var(--last-font);
     font-weight: bold;
     margin-top: -40px;
 }
@@ -90,7 +110,7 @@ body {
 }
 
 .project-card {
-    background: linear-gradient(60deg, #0a7be6, #003dc2);
+    background: var(--card-background);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 20px auto;
@@ -121,13 +141,13 @@ body {
 }
 
 .project-info h2 {
-    font-family: 'font';
+    font-family: var(--third-font);
     font-size: 31px;
     color: black;
 }
 
 .project-info p {
-    font-family: 'desc-font';
+    font-family: var(--last-font);
     font-size: 16px;
     color: black;
 }
@@ -135,7 +155,7 @@ body {
 .skills {
     text-align: center;
     margin: 20px auto;
-    font-family: 'font';
+    font-family: var();
     font-size: 50px;
 }
 
@@ -494,4 +514,10 @@ body {
       stroke-dasharray: 90, 150;
       stroke-dashoffset: -124;
     }
+  }
+  .gradient-text{
+    background: var(--main-gradient);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 20px var(--t-main-color);
   }
