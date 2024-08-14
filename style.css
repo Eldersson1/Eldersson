@@ -425,14 +425,13 @@ body {
         width: 90%;
     }
 }
-/* Add keyframes for sliding animation */
-@keyframes slide-left {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
+@keyframes slide-right {
+    0% {
+        transform: translateX(-100%); /* Start from the left, out of view */
+        opacity: 1;
     }
-    to {
-        transform: translateX(0);
+    100% {
+        transform: translateX(100%); /* Move to the right, out of view */
         opacity: 1;
     }
 }
@@ -440,7 +439,7 @@ body {
 /* Apply the animation to cards */
 .card {
     opacity: 0;
-    animation: slide-left 1s ease-out forwards;
+    animation: slide-right 10s linear infinite; /* Use slide-right animation */
 }
 
 .hidden {
