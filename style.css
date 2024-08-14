@@ -208,13 +208,13 @@ body {
 }
 
 .card .project-info h2 {
-    font-family: 'font';
+    font-family: var(--third-font);
     font-size: 18px;
     color: black;
 }
 
 .card .project-info p {
-    font-family: 'desc-font';
+    font-family: var(--last-font);
     font-size: 14px;
     color: black;
 }
