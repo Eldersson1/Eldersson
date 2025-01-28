@@ -103,3 +103,13 @@ if (playButton) {
 
 // Initial card loading
 loadCards();
+
+document.addEventListener("DOMContentLoaded", () => {
+const copyButton = document.getElementById("copyButton");
+  
+if (copyButton) {
+  copyButton.addEventListener("click", copyText);
+} else {
+  console.error("Copy button not found.");
+}
+});
