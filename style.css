@@ -74,14 +74,16 @@ body {
 
 .big-text {
     font-size: 50px;
-    color: black;
+    background: linear-gradient(#6f00ff, #4400ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
     font-family: var(--third-font);
     font-weight: bold;
 }
 
 .small-text {
-    font-size: 20px;
+    font-size: 30px;
     background: linear-gradient(#88ff00, #bbff01);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
