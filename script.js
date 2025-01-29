@@ -104,12 +104,16 @@ if (playButton) {
 // Initial card loading
 loadCards();
 
-document.addEventListener("DOMContentLoaded", () => {
-const copyButton = document.getElementById("copyButton");
+document.getElementById("copyButton").addEventListener("click", function() {
+    // Text to copy
+    const email = "elderssonmc@gmail.com";
   
-if (copyButton) {
-  copyButton.addEventListener("click", copyText);
-} else {
-  console.error("Copy button not found.");
-}
-});
+    // Use the Clipboard API
+    navigator.clipboard.writeText(email)
+      .then(() => {
+        alert("Email copied to clipboard!");
+      })
+      .catch(err => {
+        console.error("Failed to copy: ", err);
+      });
+  });
