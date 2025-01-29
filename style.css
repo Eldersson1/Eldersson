@@ -74,7 +74,7 @@ body {
 
 .big-text {
     font-size: 50px;
-    background: linear-gradient(#680000, #ca3305);
+    background: linear-gradient(#000022, #00004d);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
