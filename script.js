@@ -105,8 +105,8 @@ if (playButton) {
 loadCards();
 
 document.getElementById("copyEmail").addEventListener("click", function(event) {
-    event.preventDefault(); // Stop default <a> tag behavior
-  
+    event.preventDefault(); // Stops the `<a>` tag from redirecting
+    
     navigator.clipboard.writeText("elderssonmc@gmail.com")
       .then(() => {
         alert("Email copied to clipboard!");
