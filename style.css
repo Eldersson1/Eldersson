@@ -81,7 +81,7 @@ body {
     font-family: var(--third-font);
     font-weight: bold;
     text-shadow: 0 0 5px #000022b4, 0 0 10px #00004db4;
-    margin: 10px;
+    margin: 20px;
 }
 
 .small-text {
