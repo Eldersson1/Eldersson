@@ -57,6 +57,7 @@ body {
 .round {
     border-radius: 50%;
     cursor: pointer;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes spin {
