@@ -103,16 +103,3 @@ if (playButton) {
 
 // Initial card loading
 loadCards();
-
-document.getElementById("copyEmail").addEventListener("click", function(event) {
-    event.preventDefault(); // Stops the `<a>` tag from redirecting
-    
-    navigator.clipboard.writeText("elderssonmc@gmail.com")
-      .then(() => {
-        alert("Email copied to clipboard!");
-      })
-      .catch(err => {
-        console.error("Failed to copy email: ", err);
-      });
-  });
-  
