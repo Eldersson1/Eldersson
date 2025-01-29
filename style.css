@@ -82,7 +82,9 @@ body {
 
 .small-text {
     font-size: 20px;
-    color: linear-gradient(#88ff00, #bbff01);
+    background: linear-gradient(#88ff00, #bbff01);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
     font-family: var(--last-font);
     font-weight: bold;
