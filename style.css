@@ -80,6 +80,7 @@ body {
     text-align: center;
     font-family: var(--third-font);
     font-weight: bold;
+    text-shadow: 0 0 5px #000022, 0 0 10px #00004d;
 }
 
 .small-text {
