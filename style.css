@@ -498,6 +498,10 @@ body {
     text-align: center;
     font-size: 60px;
 }
+.yt-content {
+    display: grid;
+    gap: 10px;
+}
 .video-container {
     align-items: center;
 }
