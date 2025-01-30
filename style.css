@@ -485,5 +485,16 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
-    font-size: 70px;
+    font-size: 100px;
+}
+.content-category {
+    align-items: center;
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    text-shadow: 0 0 5px #0000c7b4, 0 0 10px #00004db4;
+    background: linear-gradient(#0000c7b4, #00004db4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 60px;
 }
