@@ -501,6 +501,8 @@ body {
 .yt-content {
     display: grid;
     gap: 10px;
+    background: fixed;
+    background-color: rgb(3, 0, 46);
 }
 .video-container {
     align-items: center;
