@@ -498,7 +498,6 @@ body {
     text-align: center;
     font-size: 60px;
     margin-bottom: 20px;
-    max-width: 600px;
 }
 
 .yt-content {
@@ -518,7 +517,7 @@ body {
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0px 0px 10px rgb(1, 0, 44, 0.795);
-    max-width: 800px;
+    max-width: 600px;
     text-align: center;
 }
 
