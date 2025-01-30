@@ -498,7 +498,6 @@ body {
     text-align: center;
     font-size: 60px;
     margin-bottom: 20px;
-    grid: row;
 }
 
 .yt-content {
@@ -508,6 +507,7 @@ body {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
+    grid: row;
 }
 
 .video-container {
