@@ -491,8 +491,8 @@ body {
     align-items: center;
     font-family: var(--secondary-font);
     font-weight: bold;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.658), 0 0 10px rgba(0, 0, 0, 0.658);
-    background: linear-gradient(rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.658));
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.658), 0 0 10px rgba(180, 0, 0, 0.658);
+    background: linear-gradient(rgba(255, 0, 0, 0.658), rgba(180, 0, 0, 0.658));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
