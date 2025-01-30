@@ -524,7 +524,7 @@ body {
 .video-container iframe {
     border-radius: 10px;
     width: 100%;
-    max-width: 560px;
+    max-width: 800px;
     height: 315px;
 }
 
