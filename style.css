@@ -530,11 +530,12 @@ body {
     font-weight: bold;
     font-size: 40px;
     margin-top: 10px;
+    top: -4px;
 }
 
 .video-description {
     color: white;
     font-size: 29px;
     opacity: 0.8;
-    margin-top: 5px;
+    margin-top: 2px;
 }
