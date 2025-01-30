@@ -507,3 +507,14 @@ body {
 .video-container {
     align-items: center;
 }
+.video-title {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.video-description {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
