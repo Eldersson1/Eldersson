@@ -498,3 +498,6 @@ body {
     text-align: center;
     font-size: 60px;
 }
+.video-container {
+    align-items: center;
+}
