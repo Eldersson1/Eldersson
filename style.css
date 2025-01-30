@@ -498,6 +498,7 @@ body {
     text-align: center;
     font-size: 60px;
     margin-bottom: 20px;
+    max-width: 600px;
 }
 
 .yt-content {
