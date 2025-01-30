@@ -501,7 +501,7 @@ body {
 .yt-content {
     display: grid;
     gap: 10px;
-    background: fixed;
+    background: relative;
     background-color: rgb(3, 0, 46);
 }
 .video-container {
