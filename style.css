@@ -505,7 +505,7 @@ body {
     flex-wrap: wrap; /* Allows items to move to the next line on smaller screens */
     justify-content: center; /* Centers the content */
     gap: 20px; /* Adds spacing between video cards */
-    flex-direction: row;
+    flex-direction: column;
     padding: 20px;
     grid: row;
 }
