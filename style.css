@@ -513,7 +513,7 @@ body {
 .video-container {
     display: flex;
     max-width: 560px; /* Prevent stretching */
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     background: rgb(0, 0, 8);
     border-radius: 10px;
@@ -521,6 +521,7 @@ body {
     box-shadow: 0px 0px 10px rgb(1, 0, 44, 0.795);
     transition: box-shadow 0.3s ease-in-out;
     text-align: center;
+    flex: 1; /* Allows flexibility */
 }
 
 .video-container iframe {
