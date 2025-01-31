@@ -508,7 +508,6 @@ body {
     flex-direction: row;
     padding: 20px;
     grid: row;
-    top: 200px;
 }
 
 .video-container {
