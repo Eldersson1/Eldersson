@@ -522,6 +522,7 @@ body {
     transition: box-shadow 0.3s ease-in-out;
     text-align: center;
     flex: 1; /* Allows flexibility */
+    top: 200px;
 }
 
 .video-container iframe {
