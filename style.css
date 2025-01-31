@@ -512,7 +512,6 @@ body {
 
 .video-container {
     display: flex;
-    width: 45%; /* Make sure they take up about half the space */
     max-width: 560px; /* Prevent stretching */
     flex-direction: column;
     align-items: center;
