@@ -552,4 +552,5 @@ body {
     box-shadow: 0px 0px 10px rgb(1, 0, 44, 0.795);
     transition: box-shadow 0.3s ease-in-out;
     text-align: center;
+    flex-wrap: wrap;
 }
