@@ -554,4 +554,5 @@ body {
     text-align: center;
     flex-direction: row;
     padding: 20px;
+    grid: row;
 }
