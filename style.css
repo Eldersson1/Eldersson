@@ -542,8 +542,7 @@ body {
     margin-top: -30px;
 }
 .twitch-live {
-    display: grid;
-    place-items: center;
+    display: flex;
     max-width: 560px; /* Prevent stretching */
     flex-direction: column;
     align-items: center;
