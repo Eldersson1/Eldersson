@@ -559,7 +559,7 @@ body {
     width: 150px;
     height: 50px;
     border: none;
-    background: url('chat-button-background.png') no-repeat center center;
+    background: url('images/chat-button-background.png') no-repeat center center;
     background-size: cover;
     color: white;
     font-size: 18px;
