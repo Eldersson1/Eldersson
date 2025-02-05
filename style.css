@@ -563,9 +563,7 @@ body {
     background: url(images/chat.png) no-repeat;
     background-size: 200%; /* Zoom effect */
     background-position: center 94%; /* Align to bottom */
-    padding: 12px 16px;
     font-size: 16px;
-    text-decoration: none;
     border-radius: 20px;
     padding: 100px;
     margin: 40px 25%;
