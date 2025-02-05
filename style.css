@@ -556,7 +556,10 @@ body {
     height: 370px;
 }
 .image-button {
+    display: inline-block;
     cursor: text;
+    line-height: 60px; /* Center text vertically */
+    text-decoration: none; /* Remove underline */
     width: 50%;
     bottom: 20px;
     right: 20px;
