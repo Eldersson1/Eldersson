@@ -561,17 +561,10 @@ body {
     bottom: 20px;
     right: 20px;
     background: url(images/chat.png) no-repeat center center;
-    color: white;
     padding: 12px 16px;
     font-size: 16px;
     text-decoration: none;
     border-radius: 50px;
-    box-shadow: 0 0px 10px rgb(1, 0, 44, 0.795);
-    transition: 0.3s;
     padding: 40px;
     margin: 40px 25%;
-}
-
-.image-button:hover {
-    opacity: 0.8;
 }
