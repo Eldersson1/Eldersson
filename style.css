@@ -556,8 +556,7 @@ body {
     height: 370px;
 }
 .image-button {
-    width: 50px;
-    height: 30px;
+    width: 50%;
     border: none;
     background: url('images/chat-button-background.png') no-repeat center center;
     background-size: cover;
