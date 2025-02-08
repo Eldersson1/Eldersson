@@ -563,7 +563,7 @@ body {
     width: 50%;
     bottom: 20px;
     right: 20px;
-    background: url(images/chat.png) no-repeat;
+    background: linear-gradient(rgb(79, 76, 245), rgb(149, 145, 255));
     background-size: 200%; /* Zoom effect */
     background-position: center -2990px; /* Align to bottom */
     font-size: 16px;
