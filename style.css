@@ -565,7 +565,6 @@ body {
     right: 20px;
     background: linear-gradient(rgb(79, 76, 245), rgb(149, 145, 255));
     background-size: 200%; /* Zoom effect */
-    background-position: center -2990px; /* Align to bottom */
     font-size: 16px;
     border-radius: 20px;
     padding: 120px 120px 69px;
