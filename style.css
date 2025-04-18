@@ -573,7 +573,6 @@ body {
     font-family: var(--secondary-font);
     font-weight: bold;
     text-shadow: 0 0 5px rgba(1, 0, 44, 0.795), 0 0 10px rgb(2, 0, 77, 0.795);
-    background: linear-gradient(rgb(1, 0, 44), rgb(2, 0, 77));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
