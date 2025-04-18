@@ -557,7 +557,7 @@ body {
 }
 .image-button {
     display: inline-block;
-    cursor: text;
+    cursor: pointer;
     line-height: 60px; /* Center text vertically */
     text-decoration: none; /* Remove underline */
     width: 50%;
