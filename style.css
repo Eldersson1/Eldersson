@@ -578,4 +578,5 @@ body {
     text-align: center;
     font-size: 60px;
     margin-bottom: 20px;
+    background: linear-gradient(rgb(79, 76, 245), rgb(149, 145, 255));
 }
