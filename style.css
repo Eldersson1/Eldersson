@@ -564,6 +564,7 @@ body {
     position: relative; /* Ensures positioning works */
     bottom: 20px;
     right: 20px;
+    top: 20px;
     background: linear-gradient(rgb(79, 76, 245), rgb(149, 145, 255));
     background-size: 200%; /* Zoom effect */
     font-size: 60px; /* Unified font size */
