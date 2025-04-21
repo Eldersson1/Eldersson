@@ -558,23 +558,23 @@ body {
 .image-button {
     display: inline-block;
     cursor: pointer;
-    line-height: 60px; /* Center text vertically */
-    text-decoration: none; /* Remove underline */
+    line-height: 60px; /* Centers text vertically */
+    text-decoration: none; /* Removes underline */
     width: 50%;
+    position: absolute; /* Ensures positioning works */
     bottom: 20px;
     right: 20px;
     background: linear-gradient(rgb(79, 76, 245), rgb(149, 145, 255));
     background-size: 200%; /* Zoom effect */
-    font-size: 16px;
+    font-size: 60px; /* Unified font size */
     border-radius: 20px;
-    padding: 120px 120px 69px;
-    margin: 40px 20%;
-    align-items: center;
+    padding: 40px 60px; /* More reasonable padding */
+    margin: 20px auto; /* Centers element horizontally */
+    display: flex; /* Enables alignment */
+    justify-content: center; /* Centers content */
+    align-items: center; /* Centers text */
     font-family: var(--secondary-font);
     font-weight: bold;
-    text-shadow: 0 0 5px rgba(1, 0, 44, 0.795), 0 0 10px rgb(2, 0, 77, 0.795);
+    text-shadow: 0 0 5px rgba(1, 0, 44, 0.795), 0 0 10px rgba(2, 0, 77, 0.795);
     text-align: center;
-    font-size: 60px;
-    margin-bottom: 20px;
-    background: linear-gradient(rgb(79, 76, 245), rgb(149, 145, 255));
 }
