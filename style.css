@@ -561,7 +561,7 @@ body {
     line-height: 60px; /* Centers text vertically */
     text-decoration: none; /* Removes underline */
     width: 50%;
-    position: absolute; /* Ensures positioning works */
+    position: relative; /* Ensures positioning works */
     bottom: 20px;
     right: 20px;
     background: linear-gradient(rgb(79, 76, 245), rgb(149, 145, 255));
