@@ -568,7 +568,7 @@ body {
     background-size: 200%; /* Zoom effect */
     font-size: 60px; /* Unified font size */
     border-radius: 20px;
-    padding: 40px 60px; /* More reasonable padding */
+    padding: 80px 60px; /* More reasonable padding */
     margin: 20px auto; /* Centers element horizontally */
     display: flex; /* Enables alignment */
     justify-content: center; /* Centers content */
