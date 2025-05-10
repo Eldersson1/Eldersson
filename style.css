@@ -590,6 +590,7 @@ body {
     transition: box-shadow 0.3s ease-in-out;
     text-align: center;
     cursor: pointer;
+    max-height: 315px;
 }
 
 .content-container img {
@@ -600,4 +601,5 @@ body {
 }
 .nolink {
     text-decoration: none;
+    align-items: center;
 }
