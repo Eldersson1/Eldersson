@@ -592,6 +592,7 @@ body {
     cursor: pointer;
     flex-direction: row;
     max-height: 315px;
+    width: 1000px;
 }
 .content-container h1 {
     position: relative;
