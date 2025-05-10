@@ -583,9 +583,7 @@ body {
     max-width: 560px; /* Prevent stretching */
     flex-direction: column;
     align-items: center;
-    background-image: url("images/content.png");
-    background-size: 3;
-    background-position: 26px;
+    background: linear-gradient(#aac9ff, #6fa3fc);
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0px 0px 10px rgb(1, 0, 44, 0.795);
