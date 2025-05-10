@@ -591,6 +591,7 @@ body {
     text-align: center;
     cursor: pointer;
     max-height: 315px;
+    position: relative;
 }
 
 .content-container img {
