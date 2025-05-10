@@ -592,7 +592,6 @@ body {
     cursor: pointer;
     flex-direction: row;
     max-height: 315px;
-    width: 1000px;
 }
 .content-container h1 {
     position: relative;
@@ -607,4 +606,8 @@ body {
 .nolink {
     text-decoration: none;
     align-items: center;
+}
+.text-container {
+    display: flex;
+    position: fixed;
 }
