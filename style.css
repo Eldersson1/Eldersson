@@ -591,6 +591,8 @@ body {
     text-align: center;
     cursor: pointer;
     max-height: 315px;
+}
+.content-container h1 {
     position: relative;
 }
 
