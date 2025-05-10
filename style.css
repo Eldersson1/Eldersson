@@ -590,6 +590,7 @@ body {
     transition: box-shadow 0.3s ease-in-out;
     text-align: center;
     cursor: pointer;
+    flex-direction: row;
     max-height: 315px;
 }
 .content-container h1 {
