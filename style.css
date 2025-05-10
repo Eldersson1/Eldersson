@@ -555,48 +555,56 @@ body {
     margin: 0 auto;
     height: 370px;
 }
+.image-button {
+    display: inline-block;
+    cursor: pointer;
+    line-height: 60px; /* Centers text vertically */
+    text-decoration: none; /* Removes underline */
+    width: 50%;
+    position: relative; /* Ensures positioning works */
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(rgb(79, 76, 245), rgb(149, 145, 255));
+    background-size: 200%; /* Zoom effect */
+    font-size: 60px; /* Unified font size */
+    border-radius: 20px;
+    padding: 40px 60px; /* More reasonable padding */
+    margin: 50px auto; /* Centers element horizontally */
+    display: flex; /* Enables alignment */
+    justify-content: center; /* Centers content */
+    align-items: center; /* Centers text */
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(1, 0, 44, 0.795), 0 0 10px rgba(2, 0, 77, 0.795);
+    text-align: center;
+}
 .content-container {
     display: flex;
-    max-width: 1000px;
-    flex-direction: row;
+    max-width: 560px; /* Prevent stretching */
+    flex-direction: column;
     align-items: center;
     background: linear-gradient(#aac9ff, #6fa3fc);
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0px 0px 10px rgb(1, 0, 44, 0.795);
     transition: box-shadow 0.3s ease-in-out;
-    text-align: left;
+    text-align: center;
     cursor: pointer;
+    flex-direction: row;
     max-height: 315px;
     width: 1000px;
+}
+.content-container h1 {
+    position: relative;
 }
 
 .content-container img {
     border-radius: 10px;
-    width: 60%; /* Adjust to keep a balanced look */
+    width: 100%; /* Make the video responsive */
     height: auto;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 9; /* Maintain aspect ratio */
 }
-
-.text-container {
-    width: 40%;
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.video-title {
-    font-size: 40px;
-    font-family: var(--secondary-font);
-    font-weight: bold;
-    text-shadow: 0 0 5px rgba(1, 0, 44, 0.795), 0 0 10px rgba(2, 0, 77, 0.795);
-    margin: 0;
-}
-
-.video-description {
-    font-size: 20px;
-    font-family: var(--secondary-font);
-    font-weight: normal;
-    margin: 10px 0 0;
+.nolink {
+    text-decoration: none;
+    align-items: center;
 }
