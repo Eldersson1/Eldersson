@@ -598,3 +598,6 @@ body {
     height: auto;
     aspect-ratio: 16 / 9; /* Maintain aspect ratio */
 }
+.nolink {
+    text-decoration: none;
+}
