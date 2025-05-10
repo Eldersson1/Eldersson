@@ -578,3 +578,22 @@ body {
     text-shadow: 0 0 5px rgba(1, 0, 44, 0.795), 0 0 10px rgba(2, 0, 77, 0.795);
     text-align: center;
 }
+.content-container {
+    display: flex;
+    max-width: 560px; /* Prevent stretching */
+    flex-direction: column;
+    align-items: center;
+    background: rgb(0, 0, 8);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgb(1, 0, 44, 0.795);
+    transition: box-shadow 0.3s ease-in-out;
+    text-align: center;
+}
+
+.content-container img {
+    border-radius: 10px;
+    width: 100%; /* Make the video responsive */
+    height: auto;
+    aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+}
