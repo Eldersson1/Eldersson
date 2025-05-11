@@ -1,20 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
     const audio = document.getElementById('audio');
-    const iconPath = document.getElementById('icon-path');
+    const playButton = document.querySelector('.play-button');
+    const playImages = playButton.querySelectorAll('[data-state^="play"]');
+    const pauseImages = playButton.querySelectorAll('[data-state^="pause"]');
 
     function toggleAudio() {
         if (audio.paused) {
             audio.play();
-            iconPath.setAttribute('d', 'M6 19h4V5H6zm8-14v14h4V5z');
+            showPauseIcons();
         } else {
             audio.pause();
-            iconPath.setAttribute('d', 'M8 5v14l11-7z');
+            showPlayIcons();
         }
     }
 
-    window.toggleAudio = toggleAudio; // Ensure toggleAudio is globally accessible
+    function showPlayIcons() {
+        playImages.forEach(img => img.style.display = "block");
+        pauseImages.forEach(img => img.style.display = "none");
+    }
+
+    function showPauseIcons() {
+        playImages.forEach(img => img.style.display = "none");
+        pauseImages.forEach(img => img.style.display = "block");
+    }
+
+    window.toggleAudio = toggleAudio;
 
     audio.onended = function() {
-        iconPath.setAttribute('d', 'M8 5v14l11-7z');
+        showPlayIcons();
     }
+
+    showPlayIcons(); // Set initial state
 });
