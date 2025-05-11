@@ -10,13 +10,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const playUnhighlightImg = playButton.querySelector('[data-state="play_unhighlight"]');
     const pauseUnhighlightImg = playButton.querySelector('[data-state="pause_unhighlight"]');
 
+    // Track the current audio state
+    let isPlaying = audio.paused ? false : true;
+
     // Function to toggle audio play/pause
     function toggleAudio() {
         if (audio.paused) {
             audio.play();
+            isPlaying = true;
             showPauseIcons();
         } else {
             audio.pause();
+            isPlaying = false;
             showPlayIcons();
         }
     }
@@ -43,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mouse enter and leave handlers for hover effect
     function handleMouseEnter() {
-        if (audio.paused) {
+        if (!isPlaying) {
             playHighlightImg.style.display = "block";  // Show play highlighted when audio is paused
             pauseHighlightImg.style.display = "none"; // Hide pause highlighted
         } else {
@@ -53,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function handleMouseLeave() {
-        if (audio.paused) {
+        if (!isPlaying) {
             playHighlightImg.style.display = "none";  // Hide play highlighted when not hovered
             pauseHighlightImg.style.display = "none"; // Hide pause highlighted when not hovered
             playUnhighlightImg.style.display = "block"; // Show play unhighlighted by default
@@ -71,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.toggleAudio = toggleAudio;
 
     audio.onended = function() {
+        isPlaying = false;
         showPlayIcons(); // Show play icons when the audio ends
     }
 

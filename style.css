@@ -641,9 +641,10 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Distance from the bottom */
+    left: 20px;   /* Distance from the left */
+    z-index: 1000; /* Ensure it's on top of other content */
     transition: transform 0.2s;
 }
 
@@ -657,5 +658,17 @@ body {
 
 .play-button img[data-state="play_unhighlight"],
 .play-button img[data-state="pause_unhighlight"] {
+    display: block;
+}
+
+.play-button:hover img[data-state="play_highlight"] {
+    display: block;
+}
+
+.play-button:hover img[data-state="play_unhighlight"] {
+    display: none;
+}
+
+.play-button:hover img[data-state="pause_highlight"] {
     display: block;
 }
