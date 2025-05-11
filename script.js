@@ -4,12 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const playImages = playButton.querySelectorAll('[data-state^="play"]');
     const pauseImages = playButton.querySelectorAll('[data-state^="pause"]');
 
-    // Hovered states
+    // For hover logic
     const playHighlightImg = playButton.querySelector('[data-state="play_highlight"]');
     const pauseHighlightImg = playButton.querySelector('[data-state="pause_highlight"]');
     const playUnhighlightImg = playButton.querySelector('[data-state="play_unhighlight"]');
     const pauseUnhighlightImg = playButton.querySelector('[data-state="pause_unhighlight"]');
 
+    // Function to toggle audio play/pause
     function toggleAudio() {
         if (audio.paused) {
             audio.play();
@@ -20,29 +21,47 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Show play icons (when the audio is paused or when the page loads)
     function showPlayIcons() {
-        playImages.forEach(img => img.style.display = "block");
-        pauseImages.forEach(img => img.style.display = "none");
+        playImages.forEach(img => img.style.display = "none");  // Hide all play-related icons
+        pauseImages.forEach(img => img.style.display = "none"); // Hide all pause-related icons
+        playUnhighlightImg.style.display = "block";            // Show play unhighlighted
+        playHighlightImg.style.display = "none";                // Hide play highlighted
+        pauseUnhighlightImg.style.display = "none";            // Hide pause unhighlighted
+        pauseHighlightImg.style.display = "none";              // Hide pause highlighted
     }
 
+    // Show pause icons (when the audio is playing)
     function showPauseIcons() {
-        playImages.forEach(img => img.style.display = "none");
-        pauseImages.forEach(img => img.style.display = "block");
+        playImages.forEach(img => img.style.display = "none");  // Hide all play-related icons
+        pauseImages.forEach(img => img.style.display = "none"); // Hide all pause-related icons
+        playUnhighlightImg.style.display = "none";             // Hide play unhighlighted
+        playHighlightImg.style.display = "none";               // Hide play highlighted
+        pauseUnhighlightImg.style.display = "none";            // Hide pause unhighlighted
+        pauseHighlightImg.style.display = "block";             // Show pause highlighted
     }
 
     // Mouse enter and leave handlers for hover effect
     function handleMouseEnter() {
-        playHighlightImg.style.display = "block";
-        pauseHighlightImg.style.display = "block";
-        playUnhighlightImg.style.display = "none";
-        pauseUnhighlightImg.style.display = "none";
+        if (audio.paused) {
+            playHighlightImg.style.display = "block";  // Show play highlighted when audio is paused
+            pauseHighlightImg.style.display = "none"; // Hide pause highlighted
+        } else {
+            playHighlightImg.style.display = "none";  // Hide play highlighted when audio is playing
+            pauseHighlightImg.style.display = "block"; // Show pause highlighted
+        }
     }
 
     function handleMouseLeave() {
-        playHighlightImg.style.display = "none";
-        pauseHighlightImg.style.display = "none";
-        playUnhighlightImg.style.display = "block";
-        pauseUnhighlightImg.style.display = "block";
+        if (audio.paused) {
+            playHighlightImg.style.display = "none";  // Hide play highlighted when not hovered
+            pauseHighlightImg.style.display = "none"; // Hide pause highlighted when not hovered
+            playUnhighlightImg.style.display = "block"; // Show play unhighlighted by default
+        } else {
+            playHighlightImg.style.display = "none";  // Hide play highlighted when not hovered
+            pauseHighlightImg.style.display = "none"; // Hide pause highlighted when not hovered
+            pauseUnhighlightImg.style.display = "block"; // Show pause unhighlighted by default
+        }
     }
 
     // Event listeners for hover
@@ -52,8 +71,13 @@ document.addEventListener('DOMContentLoaded', function() {
     window.toggleAudio = toggleAudio;
 
     audio.onended = function() {
-        showPlayIcons();
+        showPlayIcons(); // Show play icons when the audio ends
     }
 
-    showPlayIcons(); // Set initial state
+    // Set initial state based on whether the audio is playing or paused
+    if (audio.paused) {
+        showPlayIcons();  // Show play icons initially
+    } else {
+        showPauseIcons(); // Show pause icons if audio is already playing
+    }
 });
