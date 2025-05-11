@@ -86,4 +86,21 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         showPauseIcons(); // Show pause icons if audio is already playing
     }
+
+    // Image Cropping Logic
+    const image = document.getElementById('image');
+    
+    // Get the image's original dimensions (600x60 as mentioned)
+    const originalWidth = 600;
+    const originalHeight = 60;
+    
+    // Set the new width of the image (remove 12px from the left and 100px from the right)
+    const croppedWidth = originalWidth - 12 - 100;
+    
+    // Apply the new width to the image
+    image.style.width = `${croppedWidth}px`;
+
+    // Shift the image to the left by 12px to crop that part of the image
+    image.style.position = 'relative';
+    image.style.left = '-12px';
 });
