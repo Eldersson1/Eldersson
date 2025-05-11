@@ -73,6 +73,12 @@ document.addEventListener('DOMContentLoaded', function() {
     playButton.addEventListener('mouseenter', handleMouseEnter);
     playButton.addEventListener('mouseleave', handleMouseLeave);
 
+    // Fixed position to the bottom left corner
+    playButton.style.position = 'fixed';
+    playButton.style.bottom = '20px';
+    playButton.style.left = '20px';
+    playButton.style.zIndex = '1000'; // Ensure it's on top of other content
+
     window.toggleAudio = toggleAudio;
 
     audio.onended = function() {
