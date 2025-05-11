@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7513743587463325" crossorigin="anonymous"></script>
     <script src="dbjs.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.7/dist/tailwind.min.css">
+    <script src="script.js"></script>
     <!--<script src="script.js" defer></script>-->
 </head>
 <body onload="document.body.style.opacity='1'">
@@ -40,6 +42,12 @@
                 <img src="images/content.png">
             </div>
         </a>
+    </div>
+    <div id="audio-player" class="text-center">
+        <div class="play-button" onclick="toggleAudio()">
+            <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <audio id="audio" src="images/cool.mp3"></audio>
     </div>
     <audio src="images/cool.mp3">autoplay</audio>
     <div class="line"></div>
