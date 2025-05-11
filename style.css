@@ -91,7 +91,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
-    font-family: var(--primary-font);
+    font-family: var(mc10);
     font-weight: bold;
     text-shadow: 0 0 5px #000022b4, 0 0 10px #00004db4;
     margin-bottom: 40px;
