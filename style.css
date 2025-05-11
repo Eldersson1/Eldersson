@@ -655,7 +655,12 @@ body {
     display: none;
 }
 
-.play-button img[data-state="play_unhighlight"] {
+.play-button img[data-state="play_unhighlight"],
+.play-button img[data-state="pause_unhighlight"] {
+    display: block;
+}
+
+.play-button:hover img[data-state="play_highlight"] {
     display: block;
 }
 
@@ -663,6 +668,6 @@ body {
     display: none;
 }
 
-.play-button:hover img[data-state="play_highlight"] {
+.play-button:hover img[data-state="pause_highlight"] {
     display: block;
 }
