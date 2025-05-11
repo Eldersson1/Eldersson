@@ -655,8 +655,7 @@ body {
     display: none;
 }
 
-.play-button img[data-state="play_unhighlight"],
-.play-button img[data-state="pause_unhighlight"] {
+.play-button img[data-state="play_unhighlight"] {
     display: block;
 }
 
@@ -665,13 +664,5 @@ body {
 }
 
 .play-button:hover img[data-state="play_highlight"] {
-    display: block;
-}
-
-.play-button:hover img[data-state="pause_unhighlight"] {
-    display: none;
-}
-
-.play-button:hover img[data-state="pause_highlight"] {
     display: block;
 }
