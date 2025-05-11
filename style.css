@@ -612,6 +612,10 @@ body {
     position: fixed;
 }
 .fire {
-    position: relative;
-    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Change this to 'right: 0;' for the right side */
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    z-index: 1000;
 }
