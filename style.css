@@ -611,3 +611,7 @@ body {
     display: flex;
     position: fixed;
 }
+.fire {
+    position: relative;
+    display: block;
+}
