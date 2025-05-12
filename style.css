@@ -607,6 +607,7 @@ body {
     cursor: pointer;
     flex-direction: row;
     max-height: 315px;
+    --hover-scale: 1; /* Default hover scale */
     animation: floatUpDown 3s cubic-bezier(0.25, 1, 0.5, 1) infinite;
     transition: transform 0.2s ease-in-out;
 }
@@ -619,7 +620,7 @@ body {
         }
 
 .content-container:hover {
-    transform: translateY(-5px) scale(1.05);
+    --hover-scale: 1.05; /* Adjust the hover scale */
 }
 .content-container h1 {
     position: relative;
