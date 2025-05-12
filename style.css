@@ -608,6 +608,14 @@ body {
     flex-direction: row;
     max-height: 315px;
 }
+@keyframes floatUpDown {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+#content-container:hover {
+    transform: translateY(-5px) scale(1.05);
+}
 .content-container h1 {
     position: relative;
 }
