@@ -607,12 +607,11 @@ body {
     cursor: pointer;
     flex-direction: row;
     max-height: 315px;
-    --hover-scale: 1; /* Default hover scale */
     transition: transform 0.2s ease-in-out;
 }
 
 .content-container:hover {
-    transform: scale(1.5);
+    transform: scale(1.15);
 }
 .content-container h1 {
     position: relative;
