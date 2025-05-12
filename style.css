@@ -607,8 +607,8 @@ body {
     cursor: pointer;
     flex-direction: row;
     max-height: 315px;
-    animation: floatUpDown 3s cubic-bezier(0.25, 1, 0.5, 1) infinite;
-    transition: transform 0.2s ease-in-out;
+    animation: floatUpDown 15s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+    transition: transform 0.8s ease-in-out;
 }
 @keyframes floatUpDown {
             0% { transform: translate(0, 0); }
