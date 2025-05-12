@@ -611,8 +611,8 @@ body {
     transition: transform 0.2s ease-in-out;
 }
 @keyframes floatUpDown {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+            0%, 100% { transform: translateY(0, 15); }
+            50% { transform: translateY(-15, -30px); }
         }
 
 .content-container:hover {
