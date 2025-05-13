@@ -678,3 +678,14 @@ body {
 .play-button:hover img[data-state="pause_highlight"] {
     display: block;
 }
+.mo-title {
+    font-family: var(--primary-font);
+    font-weight: bold;
+    font-size: 10%;
+}
+.mo-small-title {
+    font-family: var(--secondary-font);
+}
+.mo-paragraph {
+    font-family: var(--third-font);
+}
