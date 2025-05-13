@@ -702,7 +702,11 @@ body {
     text-shadow: 5px 5px 15px rgba(133, 133, 133, 0.5);
 }
 .concratulations {
-    color: linear-gradient(rgb(255, 251, 0), rgb(236, 70, 70)); 
+    background: linear-gradient(rgb(255, 251, 0), rgb(236, 70, 70)); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
     text-shadow: 5px 5px 15px rgba(133, 133, 133, 0.5); 
     font-size: 80px;
     font-family: var(--third-font);
