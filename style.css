@@ -681,7 +681,7 @@ body {
 .mo-title {
     font-family: var(--primary-font);
     font-weight: bold;
-    font-size: 10%;
+    font-size: 200px;
 }
 .mo-small-title {
     font-family: var(--secondary-font);
