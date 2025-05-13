@@ -719,6 +719,6 @@ body {
     gap: 20px; /* Adds spacing between video cards */
     flex-direction: row;
     padding: 50px;
-    top: 50px;
+    bottom: 50px;
     grid: row;
 }
