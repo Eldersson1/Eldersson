@@ -690,6 +690,7 @@ body {
 }
 .mo-small-title {
     font-family: var(--secondary-font);
+    font-size: 150px;
 }
 .mo-paragraph {
     font-family: var(--third-font);
