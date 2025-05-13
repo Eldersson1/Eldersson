@@ -710,5 +710,5 @@ body {
     text-shadow: 5px 5px 15px rgba(133, 133, 133, 0.5); 
     font-size: 80px;
     font-family: var(--third-font);
-    align-self: center;
+    align-items: center;
 }
