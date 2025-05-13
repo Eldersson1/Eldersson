@@ -687,13 +687,15 @@ body {
     font-family: Cal Sans;
     font-weight: bold;
     font-size: 200px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 .mo-small-title {
     font-family: var(--secondary-font);
     font-size: 130px;
-    color: #4b5869;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 .mo-paragraph {
     font-family: var(--third-font);
     font-size: 90px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
