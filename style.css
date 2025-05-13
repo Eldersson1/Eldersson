@@ -692,10 +692,12 @@ body {
 .mo-small-title {
     font-family: var(--secondary-font);
     font-size: 110px;
-    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-shadow: 5px 5px 15px rgba(133, 133, 133, 0.5);
 }
 .mo-paragraph {
     font-family: var(--third-font);
     font-size: 70px;
-    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-shadow: 5px 5px 15px rgba(133, 133, 133, 0.5);
 }
