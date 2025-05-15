@@ -7,7 +7,8 @@
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
         .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-        .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; }
+        .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; text-align: center; }
+        .card img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; }
         .cart { margin-top: 20px; }
         .button { padding: 10px 15px; background-color: #007bff; color: #fff; border: none; cursor: pointer; border-radius: 5px; }
         .button:disabled { background-color: #ccc; }
@@ -28,9 +29,9 @@
 
     <script>
         const products = [
-            { id: 1, name: 'IPHONE', price: 19.99 },
-            { id: 2, name: 'TOP PC', price: 29.99 },
-            { id: 3, name: 'Potato', price: 39.99 }
+            { id: 1, name: 'Product 1', price: 19.99, image: 'images/merch.png' },
+            { id: 2, name: 'Product 2', price: 29.99, image: 'https://via.placeholder.com/250x150' },
+            { id: 3, name: 'Product 3', price: 39.99, image: 'https://via.placeholder.com/250x150' }
         ];
 
         const cart = [];
@@ -39,6 +40,7 @@
             const productList = document.getElementById('product-list');
             productList.innerHTML = products.map(p => `
                 <div class="card">
+                    <img src="${p.image}" alt="${p.name}">
                     <h2>${p.name}</h2>
                     <p>$${p.price}</p>
                     <button class="button" onclick="addToCart(${p.id})">Add to Cart</button>
