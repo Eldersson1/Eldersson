@@ -29,7 +29,7 @@
 
     <script>
         const products = [
-            { id: 1, name: 'Product 1', price: 19.99, image: 'images/merch.png' },
+            { id: 1, name: 'Product 1', price: 19.99, image: 'https://via.placeholder.com/250x150' },
             { id: 2, name: 'Product 2', price: 29.99, image: 'https://via.placeholder.com/250x150' },
             { id: 3, name: 'Product 3', price: 39.99, image: 'https://via.placeholder.com/250x150' }
         ];
@@ -59,11 +59,20 @@
             cartList.innerHTML = cart.length ? cart.map(item => `<li>${item.name} - $${item.price}</li>`).join('') : 'Your cart is empty.';
         }
 
-        function checkout(method) {
-            document.getElementById('confirmation').style.display = 'block';
-            document.getElementById('confirmation').textContent = `Payment successful with ${method === 'card' ? 'Card' : 'PayPal'}. Thank you for your purchase!`;
-            cart.length = 0;
-            renderCart();
+        async function checkout(method) {
+            if (method === 'paypal') {
+                const response = await fetch('http://54.73.53.134/create-order', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ items: cart })
+                });
+                const data = await response.json();
+                if (data.id) {
+                    window.location.href = `https://www.sandbox.paypal.com/checkoutnow?token=${data.id}`;
+                } else {
+                    alert('Payment creation failed');
+                }
+            }
         }
 
         renderProducts();
