@@ -3,81 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <title>Store</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+        .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; }
+        .cart { margin-top: 20px; }
+        .button { padding: 10px 15px; background-color: #007bff; color: #fff; border: none; cursor: pointer; border-radius: 5px; }
+        .button:disabled { background-color: #ccc; }
+    </style>
 </head>
 <body>
-    <script>
-        import React, { useState } from 'react';
-        import { Card, CardContent } from '@/components/ui/card';
-        import { Button } from '@/components/ui/button';
+    <div class="grid" id="product-list"></div>
 
+    <div class="cart">
+        <h2>Cart</h2>
+        <ul id="cart-list"></ul>
+        <div id="checkout-buttons">
+            <button class="button" onclick="checkout('card')">Checkout with Card</button>
+            <button class="button" onclick="checkout('paypal')">Checkout with PayPal</button>
+        </div>
+        <p id="confirmation" style="display: none;"></p>
+    </div>
+
+    <script>
         const products = [
-        { id: 1, name: 'Product 1', price: 19.99 },
-        { id: 2, name: 'Product 2', price: 29.99 },
-        { id: 3, name: 'Product 3', price: 39.99 }
+            { id: 1, name: 'Product 1', price: 19.99 },
+            { id: 2, name: 'Product 2', price: 29.99 },
+            { id: 3, name: 'Product 3', price: 39.99 }
         ];
 
-        export default function Store() {
-        const [cart, setCart] = useState([]);
-        const [confirmation, setConfirmation] = useState(null);
+        const cart = [];
 
-        const addToCart = (product) => {
-            setCart([...cart, product]);
-        };
-
-        const checkoutCard = async () => {
-            setConfirmation('Payment successful with Card. Thank you for your purchase!');
-        };
-
-        const checkoutPayPal = async () => {
-            setConfirmation('Payment successful with PayPal. Thank you for your purchase!');
-        };
-
-        return (
-            <div className="p-4 grid grid-cols-1 gap-4 md:grid-cols-3">
-            {!confirmation ? (
-                <>
-                {products.map((product) => (
-                    <Card key={product.id} className="p-4">
-                    <CardContent>
-                        <h2 className="text-xl font-bold">{product.name}</h2>
-                        <p>${product.price}</p>
-                        <Button onClick={() => addToCart(product)}>Add to Cart</Button>
-                    </CardContent>
-                    </Card>
-                ))}
-
-                <div className="col-span-1 md:col-span-3 mt-4">
-                    <h2 className="text-2xl font-bold">Cart</h2>
-                    {cart.length > 0 ? (
-                    <>
-                        <ul className="list-disc list-inside">
-                        {cart.map((item, index) => (
-                            <li key={index}>{item.name} - ${item.price}</li>
-                        ))}
-                        </ul>
-                        <div className="flex gap-2">
-                        <Button onClick={checkoutCard}>Checkout with Card</Button>
-                        <Button onClick={checkoutPayPal}>Checkout with PayPal</Button>
-                        </div>
-                    </>
-                    ) : (
-                    <p>Your cart is empty.</p>
-                    )}
+        function renderProducts() {
+            const productList = document.getElementById('product-list');
+            productList.innerHTML = products.map(p => `
+                <div class="card">
+                    <h2>${p.name}</h2>
+                    <p>$${p.price}</p>
+                    <button class="button" onclick="addToCart(${p.id})">Add to Cart</button>
                 </div>
-                </>
-            ) : (
-                <div className="col-span-1 md:col-span-3 text-center">
-                <h2>{confirmation}</h2>
-                <Button onClick={() => { setCart([]); setConfirmation(null); }}>Continue Shopping</Button>
-                </div>
-            )}
-            </div>
-        );
+            `).join('');
         }
 
+        function addToCart(id) {
+            const product = products.find(p => p.id === id);
+            cart.push(product);
+            renderCart();
+        }
+
+        function renderCart() {
+            const cartList = document.getElementById('cart-list');
+            cartList.innerHTML = cart.length ? cart.map(item => `<li>${item.name} - $${item.price}</li>`).join('') : 'Your cart is empty.';
+        }
+
+        function checkout(method) {
+            document.getElementById('confirmation').style.display = 'block';
+            document.getElementById('confirmation').textContent = `Payment successful with ${method === 'card' ? 'Card' : 'PayPal'}. Thank you for your purchase!`;
+            cart.length = 0;
+            renderCart();
+        }
+
+        renderProducts();
     </script>
 </body>
 </html>
