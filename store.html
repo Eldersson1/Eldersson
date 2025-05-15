@@ -21,7 +21,6 @@
         <h2>Cart</h2>
         <ul id="cart-list"></ul>
         <div id="checkout-buttons">
-            <button class="button" onclick="checkout('card')">Checkout with Card</button>
             <button class="button" onclick="checkout('paypal')">Checkout with PayPal</button>
         </div>
         <p id="confirmation" style="display: none;"></p>
@@ -61,17 +60,8 @@
 
         async function checkout(method) {
             if (method === 'paypal') {
-                const response = await fetch('https://eldersson-e76681e6363d.herokuapp.com/', {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({ items: cart })
-                });
-                const data = await response.json();
-                if (data.id) {
-                    window.location.href = `https://www.sandbox.paypal.com/checkoutnow?token=${data.id}`;
-                } else {
-                    alert('Payment creation failed');
-                }
+                const total = cart.reduce((sum, item) => sum + item.price, 0).toFixed(2);
+                window.location.href = `https://www.sandbox.paypal.com/checkoutnow?amount=${total}`;
             }
         }
 
