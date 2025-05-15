@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Store">
+    <title>Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Inline styles for quick testing */
+        body { font-family: var(--store-font-primary); background: var(--store-bg); color: var(--store-text-color); }
+    </style>
+</head>
+<body class="store-container">
+
+    <h1 class="store-confirmation">Welcome to Our Store</h1>
+
+    <div class="store-card">
+        <h2>Product 1</h2>
+        <p>$10.00</p>
+        <button class="store-button" onclick="addToCart('Product 1', 10)">Add to Cart</button>
+    </div>
+
+    <div class="store-card">
+        <h2>Product 2</h2>
+        <p>$20.00</p>
+        <button class="store-button" onclick="addToCart('Product 2', 20)">Add to Cart</button>
+    </div>
+
+    <div class="store-cart" id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button class="store-button" onclick="checkout()">Checkout</button>
+    </div>
+
+    <div class="store-confirmation" id="confirmation" style="display: none;">
+        <h2>Thank you for your purchase!</h2>
+        <p>Your order has been confirmed.</p>
+        <button class="store-button" onclick="restart()">Continue Shopping</button>
+    </div>
+
+    <script>
+        const cart = [];
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            renderCart();
+        }
+
+        function renderCart() {
+            const cartItems = document.getElementById("cart-items");
+            const cartTotal = document.getElementById("cart-total");
+            cartItems.innerHTML = cart.map(item => `<li>${item.name} - $${item.price.toFixed(2)}</li>`).join('');
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            cartTotal.innerText = total.toFixed(2);
+        }
+
+        function checkout() {
+            document.getElementById("cart").style.display = "none";
+            document.getElementById("confirmation").style.display = "block";
+        }
+
+        function restart() {
+            cart.length = 0;
+            renderCart();
+            document.getElementById("cart").style.display = "block";
+            document.getElementById("confirmation").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
