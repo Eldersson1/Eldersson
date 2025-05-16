@@ -45,6 +45,18 @@
                 <img src="${p.image}" alt="${p.name}">
                 <h2>${p.name}</h2>
                 <p>$${p.price}</p>
+                <label>Size:</label>
+                <select id="size-${p.id}">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+                <label>Type:</label>
+                <select id="type-${p.id}">
+                    <option value="Adult">Adult</option>
+                    <option value="Youth">Youth</option>
+                    <option value="Toddler">Toddler</option>
+                </select>
                 <button class="button" onclick="addToCart(${p.id})">Add to Cart</button>
             </div>
         `).join('');
@@ -52,13 +64,15 @@
 
     function addToCart(id) {
         const product = products.find(p => p.id === id);
-        cart.push(product);
+        const size = document.getElementById(`size-${id}`).value;
+        const type = document.getElementById(`type-${id}`).value;
+        cart.push({ ...product, size, type });
         renderCart();
     }
 
     function renderCart() {
         const cartList = document.getElementById('cart-list');
-        cartList.innerHTML = cart.length ? cart.map(item => `<li>${item.name} - $${item.price}</li>`).join('') : 'Your cart is empty.';
+        cartList.innerHTML = cart.length ? cart.map(item => `<li>${item.name} - $${item.price} (Size: ${item.size}, Type: ${item.type})</li>`).join('') : 'Your cart is empty.';
     }
 
     paypal.Buttons({
