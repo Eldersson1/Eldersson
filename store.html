@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,87 +17,70 @@
         .cart { margin-top: 20px; }
         .button { padding: 10px 15px; background-color: #007bff; color: #fff; border: none; cursor: pointer; border-radius: 5px; }
         .button:disabled { background-color: #ccc; }
-        .content-container {
-            display: flex;
-            max-width: 560px; /* Prevent stretching */
-            flex-direction: column;
-            align-items: center;
-            background: linear-gradient(#aac9ff, #6fa3fc);
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0px 0px 10px rgb(1, 0, 44, 0.795);
-            transition: box-shadow 0.3s ease-in-out;
-            text-align: center;
-            cursor: pointer;
-            flex-direction: row;
-            max-height: 315px;
-            transition: transform 0.2s ease-in-out;
-}
     </style>
 </head>
 <body>
-    <div class="grid" id="product-list"></div>
-
-    <div class="cart">
-        <h2>Cart</h2>
-        <ul id="cart-list"></ul>
-        <div id="checkout-buttons">
-            <div id="paypal-button-container"></div>
-        </div>
-        <p id="confirmation" style="display: none;"></p>
+    <div class="grid" id="product-list"></div><div class="cart">
+    <h2>Cart</h2>
+    <ul id="cart-list"></ul>
+    <div id="checkout-buttons">
+        <div id="paypal-button-container"></div>
     </div>
+    <p id="confirmation" style="display: none;"></p>
+</div>
 
-    <script>
-        const products = [
-            { id: 1, name: 'Professional Merch', price: 44.99, image: 'images/merch.png' },
-            { id: 2, name: 'Sleeping in Bedwars', price: 39.99, image: 'images/bedwars.png' },
-            { id: 3, name: 'Skyblock Island', price: 39.99, image: 'images/skyblock.png' }
-        ];
+<script>
+    const products = [
+        { id: 1, name: 'Professional Merch', price: 44.99, image: 'images/merch.png' },
+        { id: 2, name: 'Sleeping in Bedwars', price: 39.99, image: 'images/bedwars.png' },
+        { id: 3, name: 'Skyblock Island', price: 39.99, image: 'images/skyblock.png' }
+    ];
 
-        const cart = [];
+    const cart = [];
 
-        function renderProducts() {
-            const productList = document.getElementById('product-list');
-            productList.innerHTML = products.map(p => `
-                <div class="card">
-                    <img src="${p.image}" alt="${p.name}">
-                    <h2>${p.name}</h2>
-                    <p>$${p.price}</p>
-                    <button class="button" onclick="addToCart(${p.id})">Add to Cart</button>
-                </div>
-            `).join('');
-        }
+    function renderProducts() {
+        const productList = document.getElementById('product-list');
+        productList.innerHTML = products.map(p => `
+            <div class="card">
+                <img src="${p.image}" alt="${p.name}">
+                <h2>${p.name}</h2>
+                <p>$${p.price}</p>
+                <button class="button" onclick="addToCart(${p.id})">Add to Cart</button>
+            </div>
+        `).join('');
+    }
 
-        function addToCart(id) {
-            const product = products.find(p => p.id === id);
-            cart.push(product);
-            renderCart();
-        }
-
-        function renderCart() {
-            const cartList = document.getElementById('cart-list');
-            cartList.innerHTML = cart.length ? cart.map(item => `<li>${item.name} - $${item.price}</li>`).join('') : 'Your cart is empty.';
-
-            paypal.Buttons({
-                createOrder: function(data, actions) {
-                    const total = cart.reduce((sum, item) => sum + item.price, 0).toFixed(2);
-                    return actions.order.create({
-                        purchase_units: [{ amount: { value: total } }]
-                    });
-                },
-                onApprove: function(data, actions) {
-                    return actions.order.capture().then(function(details) {
-                        document.getElementById('confirmation').style.display = 'block';
-                        document.getElementById('confirmation').textContent = 'Payment successful! Thank you, ' + details.payer.name.given_name + '!';
-                        cart.length = 0;
-                        renderCart();
-                    });
-                }
-            }).render('#paypal-button-container');
-        }
-
-        renderProducts();
+    function addToCart(id) {
+        const product = products.find(p => p.id === id);
+        cart.push(product);
         renderCart();
-    </script>
+    }
+
+    function renderCart() {
+        const cartList = document.getElementById('cart-list');
+        cartList.innerHTML = cart.length ? cart.map(item => `<li>${item.name} - $${item.price}</li>`).join('') : 'Your cart is empty.';
+    }
+
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            const total = cart.reduce((sum, item) => sum + item.price, 0).toFixed(2);
+            return actions.order.create({
+                purchase_units: [{ amount: { value: total } }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                document.getElementById('confirmation').style.display = 'block';
+                document.getElementById('confirmation').textContent = 'Payment successful! Thank you, ' + details.payer.name.given_name + '!';
+                cart.length = 0;
+                renderCart();
+            });
+        }
+    }).render('#paypal-button-container');
+
+    renderProducts();
+    renderCart();
+</script>
+
 </body>
 </html>
