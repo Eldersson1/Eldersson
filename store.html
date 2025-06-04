@@ -1,83 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store</title>
-    <link rel="icon" type="image/x-icon" href="/images/circle_profile.png">
-    <meta property="og:title" content="Eldersson" />
-    <meta property="og:description" content="can you guess who made this" />
-    <meta property="og:image" content="https://eldersson.netlify.app/images/circle_profile.png" />
-    <meta property="og:url" content="https://eldersson.com/store/" />
-    <script src="https://www.paypal.com/sdk/js?client-id=AS7i1lnT9wxbv2BKw15yUWQN3rmQxh_sxeqVoAUON78UQnIlVVTT3nla1C3SYd_k1rMFqF5TyENq82PN&currency=USD"></script>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; background: #007bff;}
-        .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-        .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; text-align: center; background: linear-gradient(rgba(35, 34, 119, 0.6), #2f4385);}
-        .card img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; }
-        .option-buttons { display: flex; gap: 10px; justify-content: center; margin-top: 10px; }
-        .option-buttons button { padding: 10px 20px; background: transparent; border: 2px solid #444; border-radius: 8px; color: #fff; cursor: pointer; }
-        .option-buttons button.active { border-color: #9b59b6; color: #9b59b6; }
-        .button { padding: 10px 15px; background-color: #007bff; color: #fff; border: none; cursor: pointer; border-radius: 5px; }
-        .button:disabled { background-color: #ccc; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store</title>
+  <link rel="icon" type="image/x-icon" href="/images/circle_profile.png">
+  <meta property="og:title" content="Eldersson" />
+  <meta property="og:description" content="can you guess who made this" />
+  <meta property="og:image" content="https://eldersson.netlify.app/images/circle_profile.png" />
+  <meta property="og:url" content="https://eldersson.com/store/" />
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #007bff;}
+    .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; text-align: center; background: linear-gradient(rgba(35, 34, 119, 0.6), #2f4385);}
+    .card img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; }
+    .option-buttons { display: flex; gap: 10px; justify-content: center; margin-top: 10px; }
+    .option-buttons button { padding: 10px 20px; background: transparent; border: 2px solid #444; border-radius: 8px; color: #fff; cursor: pointer; }
+    .option-buttons button.active { border-color: #9b59b6; color: #9b59b6; }
+    .button { padding: 10px 15px; background-color: #007bff; color: #fff; border: none; cursor: pointer; border-radius: 5px; }
+    .button:disabled { background-color: #ccc; }
+    .cart { margin-top: 40px; background: #fff; padding: 20px; border-radius: 10px; }
+  </style>
 </head>
 <body>
-    <div class="grid" id="product-list"></div>
-    <div class="cart">
-        <h2>Cart</h2>
-        <ul id="cart-list"></ul>
-        <div id="checkout-buttons">
-            <div id="paypal-button-container"></div>
-        </div>
-        <p id="confirmation" style="display: none;"></p>
-    </div>
+  <div class="grid" id="product-list"></div>
+  <div class="cart">
+    <h2>Cart</h2>
+    <ul id="cart-list"></ul>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_cart">
+      <input type="hidden" name="business" value="elderssonyt@gmail.com">
+      <input type="hidden" name="currency_code" value="USD">
+      <input type="hidden" id="cart-items" name="upload" value="1">
+      <!-- Cart items will be inserted here dynamically -->
+      <input type="submit" value="Checkout with PayPal" class="button">
+    </form>
+  </div>
 
 <script>
-    const products = [
-        { id: 1, name: 'Professional Merch', price: 44.99, image: 'images/merch.png' },
-        { id: 2, name: 'Sleeping in Bedwars', price: 39.99, image: 'images/bedwars.png' },
-        { id: 3, name: 'Skyblock Island', price: 39.99, image: 'images/skyblock.png' }
-    ];
+  const products = [
+    { id: 1, name: 'Professional Merch', price: 44.99, image: 'images/merch.png' },
+    { id: 2, name: 'Sleeping in Bedwars', price: 39.99, image: 'images/bedwars.png' },
+    { id: 3, name: 'Skyblock Island', price: 39.99, image: 'images/skyblock.png' }
+  ];
 
-    const cart = [];
+  const cart = [];
 
-    function renderProducts() {
-        const productList = document.getElementById('product-list');
-        productList.innerHTML = products.map(p => `
-            <div class="card">
-                <img src="${p.image}" alt="${p.name}">
-                <h2>${p.name}</h2>
-                <p>$${p.price}</p>
-                <div class="option-buttons">
-                    <button onclick="selectOption(${p.id}, 'S')">S</button>
-                    <button onclick="selectOption(${p.id}, 'M')">M</button>
-                    <button onclick="selectOption(${p.id}, 'L')">L</button>
-                </div>
-                <button class="button" onclick="addToCart(${p.id})">Add to Cart</button>
-            </div>
-        `).join('');
+  function renderProducts() {
+    const productList = document.getElementById('product-list');
+    productList.innerHTML = products.map(p => `
+      <div class="card">
+        <img src="${p.image}" alt="${p.name}">
+        <h2>${p.name}</h2>
+        <p>$${p.price}</p>
+        <div class="option-buttons">
+          <button onclick="selectOption(${p.id}, 'S')">S</button>
+          <button onclick="selectOption(${p.id}, 'M')">M</button>
+          <button onclick="selectOption(${p.id}, 'L')">L</button>
+        </div>
+        <button class="button" onclick="addToCart(${p.id})">Add to Cart</button>
+      </div>
+    `).join('');
+  }
+
+  function selectOption(id, size) {
+    const card = document.querySelectorAll('.card')[id - 1];
+    const buttons = card.querySelectorAll('.option-buttons button');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    buttons[['S', 'M', 'L'].indexOf(size)].classList.add('active');
+  }
+
+  function addToCart(id) {
+    const product = products.find(p => p.id === id);
+    const card = document.querySelectorAll('.card')[id - 1];
+    const activeBtn = card.querySelector('.option-buttons .active');
+    if (!activeBtn) {
+      alert("Please select a size.");
+      return;
     }
+    const size = activeBtn.textContent;
+    cart.push({ ...product, size });
+    renderCart();
+  }
 
-    function selectOption(id, size) {
-        const buttons = document.querySelectorAll(`.card:nth-child(${id}) .option-buttons button`);
-        buttons.forEach(btn => btn.classList.remove('active'));
-        document.querySelector(`.card:nth-child(${id}) .option-buttons button:nth-child(${['S', 'M', 'L'].indexOf(size) + 1})`).classList.add('active');
-    }
+  function renderCart() {
+    const cartList = document.getElementById('cart-list');
+    const cartItemsForm = document.querySelector('form');
+    cartList.innerHTML = cart.length ? cart.map(item => `<li>${item.name} - $${item.price} (Size: ${item.size})</li>`).join('') : 'Your cart is empty.';
 
-    function addToCart(id) {
-        const product = products.find(p => p.id === id);
-        const size = document.querySelector(`.card:nth-child(${id}) .option-buttons .active`).textContent;
-        cart.push({ ...product, size });
-        renderCart();
-    }
+    // Remove existing cart input fields (if any)
+    Array.from(cartItemsForm.elements).forEach(el => {
+      if (el.name && el.name.startsWith('item_name')) el.remove();
+    });
 
-    function renderCart() {
-        const cartList = document.getElementById('cart-list');
-        cartList.innerHTML = cart.length ? cart.map(item => `<li>${item.name} - $${item.price} (Size: ${item.size})</li>`).join('') : 'Your cart is empty.';
-    }
+    // Add PayPal-compatible input fields
+    cart.forEach((item, i) => {
+      const index = i + 1;
+      cartItemsForm.insertAdjacentHTML('beforeend', `
+        <input type="hidden" name="item_name_${index}" value="${item.name} (Size: ${item.size})">
+        <input type="hidden" name="amount_${index}" value="${item.price}">
+        <input type="hidden" name="quantity_${index}" value="1">
+      `);
+    });
+  }
 
-    renderProducts();
+  renderProducts();
 </script>
 </body>
 </html>
