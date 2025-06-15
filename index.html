@@ -1,65 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eldersson</title>
-    <link rel="icon" type="image/x-icon" href="/images/circle_profile.png">
-    <meta property="og:title" content="Eldersson" />
-    <meta property="og:description" content="can you guess who made this" />
-    <meta property="og:image" content="https://eldersson.netlify.app/images/circle_profile.png" />
-    <meta property="og:url" content="https://eldersson.com/" />
-    <link rel="stylesheet" href="style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7513743587463325" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.7/dist/tailwind.min.css">
-    <script src="script.js"></script>
-    <!--<script src="script.js" defer></script>-->
-</head>
-<body onload="document.body.style.opacity='1'">
-    <svg class="spinner" viewBox="0 0 50 50">
-        <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
-    </svg>
 
-    <img id="profileImage" src="images/profiili.png" alt="Profiilikuva" class="center round">
-    <p class="big-text">Eldersson</p>
-    <p class="small-text">I love making content for the Minecraft</p>
-    <p class="small-text">and Geometry Dash communities in a video and programming format!</p>
+<html lang="en" class="dark">  
+  <head>  
+    <meta charset="UTF-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <title>Eldersson Portfolio</title>  
+    <script src="https://cdn.tailwindcss.com"></script>  
+    <script>  
+      tailwind.config = {  
+        darkMode: "class",  
+      };  
+    </script>  
+    <link  
+      href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.css"  
+      rel="stylesheet"  
+    />  
+    <style>  
+      body {  
+        background: linear-gradient(to bottom right, #000000, #1e293b, #0f172a);  
+      }  
+      .glass {  
+        background: rgba(0, 0, 0, 0.3);  
+        border: 1px solid rgba(255, 255, 255, 0.1);  
+        backdrop-filter: blur(20px);  
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);  
+      }  
+    </style>  
+  </head>  
+  <body class="text-white font-sans p-6">  
+    <!-- Navbar -->  
+    <nav class="glass rounded-2xl p-4 mb-10 flex justify-between items-center">  
+      <h1 class="text-xl font-bold">Eldersson</h1>  
+      <a  
+        href="mailto:elderssonyt@gmail.com"  
+        class="text-white/80 hover:text-white transition flex items-center gap-1"  
+      >  
+        <i data-lucide="mail" class="w-5 h-5"></i> Contact  
+      </a>  
+    </nav>  <!-- Header -->  
+<section class="text-center mb-12 flex flex-col items-center gap-4">  
 
-    <div style="display: flex; justify-content: center;">
-        <a href="https://www.youtube.com/@Eldersson_YT" target="_blank"><img src="images/youtube-icon.png" class="icon" alt="YouTube"></a>
-        <a href="https://www.x.com/@Eldersson_YT" target="_blank"><img src="images/twitter.png" class="icon" alt="Instagram"></a>
-        <a href="https://www.tiktok.com/@eldersson_yt" target="_blank"><img src="images/tiktok-icon.png" class="icon" alt="TikTok"></a>
-        <a href="https://www.twitch.tv/eldersson" target="_blank"><img src="images/twitch.png" class="icon" alt="Twitch"></a>
-        <a href="https://discord.gg/Kkvphrwd3m" target="_blank"><img src="images/discord.png" class="icon" alt="Discord"></a>
-        <a href="https://github.com/Eldersson1" target="_blank"><img src="images/github-icon.png" class="icon" alt="GitHub"></a>
-    </div>
 
-    <div class="line"></div>
-    <div class="yt-content">
-        <a class="nolink" href="content.html">
-            <div class="content-container">
-                <img src="images/content.png">
-            </div>
-        </a>
-    </div>
-    <div class="yt-content">
-        <a class="nolink" href="modernlyoptimized.html">
-            <div class="content-container">
-                <img src="https://cdn.modrinth.com/data/Su4cGjPf/images/fce441059ddcffb41ba46009702d086e6fb7c228.png">
-            </div>
-        </a>
-    </div>
-    <div id="audio-player" class="text-center">
-        <div class="play-button" onclick="toggleAudio()" style="position: relative;">
-            <img src="images/play_unhighlight.png" data-state="play_unhighlight">
-            <img src="images/play_highlight.png" data-state="play_highlight" style="display: none;">
-            <img src="images/pause_unhighlight.png" data-state="pause_unhighlight" style="display:none;">
-            <img src="images/pause_highlight.png" data-state="pause_highlight" style="display:none;">
-        </div>
-        <audio id="audio" src="images/cool.mp3"></audio>
-    </div>
-    <audio src="images/cool.mp3">autoplay</audio>
-    <div class="line"></div>
-    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="Eldersson" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Left" data-x_margin="18" data-y_margin="18"></script>
-</body>
+<section class="text-center mb-12 flex flex-col items-center gap-4">
+
+  <!-- Profile Picture -->    <div class="w-36 h-36 rounded-full overflow-hidden border-4 border-blue-500 shadow-[0_0_20px_#3b82f6]">  
+    <img  
+      src="your-image.jpg"  
+      alt="Eldersson Profile"  
+      class="w-full h-full object-cover"  
+    />  
+  </div>    <!-- Title + Bio -->    <h2 class="text-4xl font-extrabold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">  
+    Video Editor & Minecraft Tinkerer  
+  </h2>  
+  <p class="text-white/90 text-lg">  
+    I do a lot of random stuff in Minecraft and programming.  
+  </p>  
+</section>  <!-- About + Skills -->  
+<section class="grid md:grid-cols-2 gap-6 mb-12">  
+  <div class="glass rounded-2xl p-6">  
+    <h3 class="text-2xl font-semibold flex items-center gap-2 text-blue-400 mb-3">  
+      <i data-lucide="user" class="w-6 h-6"></i> About Me  
+    </h3>  
+    <p class="text-left text-white/85 leading-relaxed">  
+      I'm Eldersson. I make videos, code Minecraft stuff, and mess with  
+      ideas. I’m not a pro yet — just exploring and learning.  
+    </p>  
+  </div>  
+
+  <div class="glass rounded-2xl p-6">  
+    <h3 class="text-2xl font-semibold flex items-center gap-2 text-blue-400 mb-3">  
+      <i data-lucide="hammer" class="w-6 h-6"></i> Skills  
+    </h3>  
+    <ul class="text-left list-disc list-inside space-y-2 text-white/85">  
+      <li>Web Development (React, Tailwind, HTML/CSS)</li>  
+      <li>Mediocre Java (Minecraft modding/plugins)</li>  
+      <li>Basic video editing & storytelling</li>  
+    </ul>  
+  </div>  
+</section>  
+
+<!-- Projects -->
+<section class="text-left glass rounded-2xl p-6 mb-12">
+  <h3 class="text-2xl font-semibold flex items-center gap-2 text-blue-400 mb-3">
+    <i data-lucide="folder" class="w-6 h-6"></i> Projects
+  </h3>
+  <ul class="space-y-4 text-white/90">
+    <li>
+      <a
+        href="https://youtube.com/@Eldersson"
+        target="_blank"
+        class="font-semibold text-blue-400 hover:underline"
+        >YouTube Channel</a
+      >
+      — Minecraft videos, PvP content, and roleplay cinematics.
+    </li>
+    <li>
+      <a
+        href="https://modrinth.com/user/Eldersson"
+        target="_blank"
+        class="font-semibold text-blue-400 hover:underline"
+        >Modrinth Uploads</a
+      >
+      — Client mods and useful tools.
+    </li>
+    <li>
+      <a
+        href="#"
+        target="_blank"
+        class="font-semibold text-blue-400 hover:underline"
+        >Minecraft Server (Eldepato SMP)</a
+      >
+      — Modern factions + lifesteal + RP wars.
+    </li>
+  </ul>
+</section>
+
+<!-- Contact -->
+
+<section class="glass rounded-2xl p-6 mb-12">  
+  <h3 class="text-2xl font-semibold flex items-center gap-2 text-blue-400 mb-3">  
+    <i data-lucide="message-circle" class="w-6 h-6"></i> Contact Me  
+  </h3>  
+  <form  
+    action="https://formspree.io/f/mblyyajk"  
+    method="POST"  
+    class="grid gap-4"  
+  >  
+    <input  
+      type="text"  
+      name="name"  
+      required  
+      placeholder="Your name"  
+      class="bg-white/10 text-white p-3 rounded-lg placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500"  
+    />  
+    <input  
+      type="email"  
+      name="email"  
+      required  
+      placeholder="Your email"  
+      class="bg-white/10 text-white p-3 rounded-lg placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500"  
+    />  
+    <textarea  
+      name="message"  
+      required  
+      placeholder="Your message"  
+      rows="4"  
+      class="bg-white/10 text-white p-3 rounded-lg placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500"  
+    ></textarea>  
+    <button  
+      type="submit"  
+      class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold transition"  
+    >  
+      Send Message  
+    </button>  
+  </form>  
+</section>  <!-- Footer -->  
+<footer class="text-center text-white/70 mt-12">  
+  <div class="flex justify-center gap-4 mb-4">  
+    <a href="https://youtube.com/@Eldersson"><i data-lucide="youtube"></i></a>  
+    <a href="https://github.com/Eldersson1"><i data-lucide="github"></i></a>  
+    <a href="mailto:elderssonyt@gmail.com"><i data-lucide="mail"></i></a>  
+    <a href="https://modrinth.com/user/Eldersson"><i data-lucide="code"></i></a>  
+    <a href="#"><i data-lucide="book-open"></i></a>  
+  </div>  
+  <p>© 2025 Eldersson</p>  
+</footer>  
+
+<script src="https://unpkg.com/lucide@latest"></script>  
+<script>  
+  lucide.createIcons();  
+</script>
+
+  </body>  
 </html>
